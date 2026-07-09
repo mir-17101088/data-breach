@@ -26,6 +26,109 @@
     ::selection { background: #B9E0DA; color: #10201F; }
     @keyframes tgiFadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
     @keyframes tgiPulse { 0%,100% { opacity: 0.55; } 50% { opacity: 1; } }
+    /* Responsive tuning for decorative section art (base styles are inline) */
+    @media (max-width: 1000px) {
+      #tgi-art-b { top: auto !important; bottom: 10px !important; right: -20px !important; width: min(96vw, 640px) !important; opacity: 0.12 !important; }
+      #tgi-art-a2 { display: none !important; }
+    }
+    @media (max-width: 900px) {
+      #tgi-art-a { width: 320px !important; right: -34px !important; opacity: 0.12 !important; }
+      #tgi-art-d { opacity: 0.11 !important; }
+    }
+    /* ===== Breach Mechanism — inline narrative visualization ===== */
+    #tgi-breach-mech svg text { font-family: 'Roboto', system-ui, sans-serif; }
+    #tgi-breach-mech .bm-glow { transition: opacity 1400ms ease; }
+    #tgi-breach-mech.is-active .bm-glow { opacity: 0; }
+    #tgi-breach-mech .bm-vaultbox { transition: fill 1300ms ease; }
+    #tgi-breach-mech.is-active .bm-vaultbox { fill: rgba(185,224,218,0.10); }
+    #tgi-breach-mech .bm-lock { transition: opacity 600ms ease 200ms, transform 700ms cubic-bezier(0.22,0.61,0.36,1) 200ms; }
+    #tgi-breach-mech.is-active .bm-lock { opacity: 0; transform: translateY(-12px); }
+    #tgi-breach-mech .bm-crack { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; transition: stroke-dashoffset 700ms cubic-bezier(0.4,0,0.2,1) 150ms, opacity 300ms ease 150ms; }
+    #tgi-breach-mech.is-active .bm-crack { stroke-dashoffset: 0; opacity: 1; }
+    #tgi-breach-mech .bm-exposed { opacity: 0; transition: opacity 800ms ease 1500ms; }
+    #tgi-breach-mech.is-active .bm-exposed { opacity: 1; }
+    #tgi-breach-mech .bm-trail { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; transition: stroke-dashoffset 1500ms cubic-bezier(0.4,0,0.2,1), opacity 500ms ease; }
+    #tgi-breach-mech.is-active .bm-trail { stroke-dashoffset: 0; opacity: 0.5; }
+    #tgi-breach-mech .bm-end { opacity: 0; transform: scale(0.15); transform-box: fill-box; transform-origin: center; transition: transform 640ms cubic-bezier(0.34,1.4,0.5,1), opacity 640ms ease; }
+    #tgi-breach-mech.is-active .bm-end { opacity: 1; transform: scale(1); }
+    #tgi-breach-mech .bm-dot { transform: translate(0,0); transition: transform 2200ms cubic-bezier(0.22,0.61,0.36,1); will-change: transform; }
+    #tgi-breach-mech .bm-dot:nth-child(1){transition-delay:0ms}
+    #tgi-breach-mech .bm-dot:nth-child(2){transition-delay:50ms}
+    #tgi-breach-mech .bm-dot:nth-child(3){transition-delay:100ms}
+    #tgi-breach-mech .bm-dot:nth-child(4){transition-delay:150ms}
+    #tgi-breach-mech .bm-dot:nth-child(5){transition-delay:200ms}
+    #tgi-breach-mech .bm-dot:nth-child(6){transition-delay:250ms}
+    #tgi-breach-mech .bm-dot:nth-child(7){transition-delay:300ms}
+    #tgi-breach-mech .bm-dot:nth-child(8){transition-delay:350ms}
+    #tgi-breach-mech .bm-dot:nth-child(9){transition-delay:400ms}
+    #tgi-breach-mech .bm-dot:nth-child(10){transition-delay:450ms}
+    #tgi-breach-mech .bm-dot:nth-child(11){transition-delay:500ms}
+    #tgi-breach-mech .bm-dot:nth-child(12){transition-delay:550ms}
+    #tgi-breach-mech .bm-dot:nth-child(13){transition-delay:600ms}
+    #tgi-breach-mech .bm-dot:nth-child(14){transition-delay:650ms}
+    #tgi-breach-mech .bm-dot:nth-child(15){transition-delay:700ms}
+    #tgi-breach-mech .bm-dot:nth-child(16){transition-delay:750ms}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(1){transform:translate(154px,-78px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(2){transform:translate(198px,-94px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(3){transform:translate(242px,-72px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(4){transform:translate(248px,-98px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(5){transform:translate(196px,-48px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(6){transform:translate(240px,-70px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(7){transform:translate(278px,-38px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(8){transform:translate(96px,134px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(9){transform:translate(154px,16px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(10){transform:translate(224px,16px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(11){transform:translate(272px,2px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(12){transform:translate(188px,74px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(13){transform:translate(204px,28px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(14){transform:translate(320px,78px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(15){transform:translate(188px,108px)}
+    #tgi-breach-mech.is-active .bm-dot:nth-child(16){transform:translate(46px,108px)}
+    #tgi-breach-mech .bm-trail:nth-child(1){transition-delay:0ms}
+    #tgi-breach-mech .bm-trail:nth-child(2){transition-delay:50ms}
+    #tgi-breach-mech .bm-trail:nth-child(3){transition-delay:100ms}
+    #tgi-breach-mech .bm-trail:nth-child(4){transition-delay:150ms}
+    #tgi-breach-mech .bm-trail:nth-child(5){transition-delay:200ms}
+    #tgi-breach-mech .bm-trail:nth-child(6){transition-delay:250ms}
+    #tgi-breach-mech .bm-trail:nth-child(7){transition-delay:300ms}
+    #tgi-breach-mech .bm-trail:nth-child(8){transition-delay:350ms}
+    #tgi-breach-mech .bm-trail:nth-child(9){transition-delay:400ms}
+    #tgi-breach-mech .bm-trail:nth-child(10){transition-delay:450ms}
+    #tgi-breach-mech .bm-trail:nth-child(11){transition-delay:500ms}
+    #tgi-breach-mech .bm-trail:nth-child(12){transition-delay:550ms}
+    #tgi-breach-mech .bm-trail:nth-child(13){transition-delay:600ms}
+    #tgi-breach-mech .bm-trail:nth-child(14){transition-delay:650ms}
+    #tgi-breach-mech .bm-trail:nth-child(15){transition-delay:700ms}
+    #tgi-breach-mech .bm-trail:nth-child(16){transition-delay:750ms}
+    #tgi-breach-mech .bm-end:nth-child(1){transition-delay:1150ms}
+    #tgi-breach-mech .bm-end:nth-child(2){transition-delay:1200ms}
+    #tgi-breach-mech .bm-end:nth-child(3){transition-delay:1250ms}
+    #tgi-breach-mech .bm-end:nth-child(4){transition-delay:1300ms}
+    #tgi-breach-mech .bm-end:nth-child(5){transition-delay:1350ms}
+    #tgi-breach-mech .bm-end:nth-child(6){transition-delay:1400ms}
+    #tgi-breach-mech .bm-end:nth-child(7){transition-delay:1450ms}
+    #tgi-breach-mech .bm-end:nth-child(8){transition-delay:1500ms}
+    #tgi-breach-mech .bm-end:nth-child(9){transition-delay:1550ms}
+    #tgi-breach-mech .bm-end:nth-child(10){transition-delay:1600ms}
+    #tgi-breach-mech .bm-end:nth-child(11){transition-delay:1650ms}
+    #tgi-breach-mech .bm-end:nth-child(12){transition-delay:1700ms}
+    #tgi-breach-mech .bm-end:nth-child(13){transition-delay:1750ms}
+    #tgi-breach-mech .bm-end:nth-child(14){transition-delay:1800ms}
+    #tgi-breach-mech .bm-end:nth-child(15){transition-delay:1850ms}
+    #tgi-breach-mech .bm-end:nth-child(16){transition-delay:1900ms}
+    @media (prefers-reduced-motion: reduce) {
+      #tgi-breach-mech * { transition-duration: 1ms !important; transition-delay: 0ms !important; }
+    }
+    /* Sticky-header responsiveness */
+    @media (max-width: 620px) {
+      #tgi-hd-row { padding-left: 14px !important; padding-right: 14px !important; gap: 10px !important; }
+      #tgi-hd-desc { display: none !important; }
+      #tgi-hd-logo { height: 34px !important; }
+    }
+    @media (max-width: 420px) {
+      #tgi-hd-pdflabel { display: none !important; }
+      #tgi-hd-pdf { padding: 9px !important; gap: 0 !important; }
+    }
   </style>
 </helmet>
 
@@ -33,18 +136,18 @@
 
   <!-- ======= Sticky header ======= -->
   <header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.86);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--border-subtle)">
-    <div style="max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <div id="tgi-hd-row" style="max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px">
       <div style="display:flex;align-items:center;gap:14px;min-width:0">
-        <a href="https://techglobalinstitute.com/" target="_blank" rel="noopener" title="techglobalinstitute.com" style="flex:0 0 auto;display:inline-block"><img src="assets/tgi-logo-primary.png" alt="Tech Global Institute" style="height:40px;width:auto;display:block"></a>
+        <a href="https://techglobalinstitute.com/" target="_blank" rel="noopener" title="techglobalinstitute.com" style="flex:0 0 auto;display:inline-block"><img id="tgi-hd-logo" src="assets/tgi-logo-primary.png" alt="Tech Global Institute" style="height:40px;width:auto;display:block"></a>
         <div style="display:none"></div>
-        <div style="border-left:1px solid var(--border-default);padding-left:14px;min-width:0;display:flex;flex-direction:column;gap:1px">
+        <div id="tgi-hd-desc" style="border-left:1px solid var(--border-default);padding-left:14px;min-width:0;display:flex;flex-direction:column;gap:1px">
           <span style="font-family:var(--font-ui);font-size:0.6875rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-ocean);white-space:nowrap">REPORT</span>
           <span style="font-family:var(--font-ui);font-size:0.8125rem;font-weight:500;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Data breaches in Bangladesh · 2023–2026</span>
         </div>
       </div>
-      <a href="{{ pdfUrl }}" target="_blank" rel="noopener" style="flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;background:var(--accent-cta);color:#FFFFFF;font-family:var(--font-ui);font-weight:600;font-size:0.875rem;padding:10px 18px;border-radius:999px;text-decoration:none;transition:background 160ms cubic-bezier(0.4,0,0.2,1), transform 120ms cubic-bezier(0.4,0,0.2,1);box-shadow:0 1px 2px rgba(16,32,31,0.12)" style-hover="background:var(--accent-cta-hover);color:#FFFFFF;text-decoration:none" style-active="transform:translateY(1px)">
+      <a id="tgi-hd-pdf" href="{{ pdfUrl }}" target="_blank" rel="noopener" style="flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;background:var(--accent-cta);color:#FFFFFF;font-family:var(--font-ui);font-weight:600;font-size:0.875rem;padding:10px 18px;border-radius:999px;text-decoration:none;transition:background 160ms cubic-bezier(0.4,0,0.2,1), transform 120ms cubic-bezier(0.4,0,0.2,1);box-shadow:0 1px 2px rgba(16,32,31,0.12)" style-hover="background:var(--accent-cta-hover);color:#FFFFFF;text-decoration:none" style-active="transform:translateY(1px)">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><polyline points="9 15 12 18 15 15"></polyline></svg>
-        <span style="white-space:nowrap">View PDF report</span>
+        <span id="tgi-hd-pdflabel" style="white-space:nowrap">View PDF report</span>
       </a>
     </div>
     <div id="tgi-progress" style="height:3px;background:var(--tgi-ocean);transform:scaleX(0);transform-origin:left;transition:transform 80ms linear"></div>
@@ -82,7 +185,55 @@
   </section>
 
   <!-- ======= Executive summary ======= -->
-  <section data-screen-label="Executive summary" style="background:#FFFFFF">
+  <section data-screen-label="Executive summary" style="position:relative;background:#FFFFFF;overflow:hidden">
+    <div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+      <svg id="tgi-art-a" viewBox="0 0 560 620" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; right: clamp(-30px,2vw,60px); bottom: -30px; width: clamp(340px,40vw,560px); height: auto; opacity: 0.15; -webkit-mask-image: linear-gradient(115deg,transparent 2%,#000 30%); mask-image: linear-gradient(115deg,transparent 2%,#000 30%)">
+        <g id="tgi-doc-scatter">
+          <path d="M74 40 H326 Q340 40 340 54 V286" stroke="#174D4F" stroke-width="2.5"></path>
+          <path d="M60 440 V54 Q60 40 74 40" stroke="#174D4F" stroke-width="2.5"></path>
+          <path d="M60 440 H208" stroke="#174D4F" stroke-width="2.5"></path>
+          <path d="M340 302 V330" stroke="#174D4F" stroke-width="2.5" opacity="0.85"></path>
+          <path d="M340 346 V368" stroke="#174D4F" stroke-width="2.5" opacity="0.6"></path>
+          <path d="M341 384 V398" stroke="#174D4F" stroke-width="2.5" opacity="0.4"></path>
+          <path d="M226 440 H258" stroke="#174D4F" stroke-width="2.5" opacity="0.65"></path>
+          <path d="M276 441 H296" stroke="#174D4F" stroke-width="2.5" opacity="0.4"></path>
+          <path d="M92 96 H236" stroke="#246E72" stroke-width="2"></path>
+          <path d="M92 130 H308" stroke="#246E72" stroke-width="2"></path>
+          <path d="M92 158 H308" stroke="#246E72" stroke-width="2"></path>
+          <path d="M92 186 H308" stroke="#246E72" stroke-width="2"></path>
+          <path d="M92 214 H308" stroke="#246E72" stroke-width="2"></path>
+          <path d="M92 242 H308" stroke="#246E72" stroke-width="2"></path>
+          <path d="M92 270 H282" stroke="#246E72" stroke-width="2" opacity="0.9"></path>
+          <path d="M92 298 H248" stroke="#246E72" stroke-width="2" opacity="0.75"></path>
+          <path d="M92 326 H196" stroke="#246E72" stroke-width="2" opacity="0.6"></path>
+          <path d="M92 354 H148" stroke="#246E72" stroke-width="2" opacity="0.45"></path>
+          <path d="M164 354 H186" stroke="#246E72" stroke-width="2" opacity="0.35"></path>
+          <path d="M92 382 H122" stroke="#246E72" stroke-width="2" opacity="0.3"></path>
+          <path d="M356 320 L374 352" stroke="#174D4F" stroke-width="1.5" opacity="0.3"></path>
+          <path d="M352 392 L390 414" stroke="#174D4F" stroke-width="1.5" opacity="0.28"></path>
+          <path d="M412 446 L438 486" stroke="#174D4F" stroke-width="1.5" opacity="0.25"></path>
+          <path d="M462 528 L488 562" stroke="#174D4F" stroke-width="1.5" opacity="0.2"></path>
+          <circle cx="356" cy="320" r="3.2" fill="#1C7D84" opacity="0.9"></circle>
+          <circle cx="374" cy="352" r="2.6" fill="#174D4F" opacity="0.8"></circle>
+          <circle cx="352" cy="392" r="3.6" fill="#259B5C" opacity="0.85"></circle>
+          <circle cx="390" cy="414" r="2.6" fill="#174D4F" opacity="0.7"></circle>
+          <circle cx="330" cy="452" r="3" fill="#174D4F" opacity="0.75"></circle>
+          <circle cx="368" cy="470" r="2.2" fill="#174D4F" opacity="0.6"></circle>
+          <circle cx="412" cy="446" r="3" fill="#246E72" opacity="0.65"></circle>
+          <circle cx="302" cy="482" r="2.6" fill="#174D4F" opacity="0.65"></circle>
+          <circle cx="438" cy="486" r="3.4" fill="#1C7D84" opacity="0.6"></circle>
+          <circle cx="398" cy="510" r="2.6" fill="#174D4F" opacity="0.55"></circle>
+          <circle cx="352" cy="524" r="2.2" fill="#174D4F" opacity="0.5"></circle>
+          <circle cx="462" cy="528" r="3" fill="#174D4F" opacity="0.5"></circle>
+          <circle cx="428" cy="558" r="2.6" fill="#174D4F" opacity="0.45"></circle>
+          <circle cx="488" cy="562" r="2.2" fill="#174D4F" opacity="0.4"></circle>
+          <circle cx="390" cy="578" r="2" fill="#174D4F" opacity="0.38"></circle>
+          <circle cx="514" cy="596" r="2.6" fill="#174D4F" opacity="0.34"></circle>
+          <circle cx="458" cy="602" r="1.8" fill="#174D4F" opacity="0.3"></circle>
+          <circle cx="530" cy="556" r="1.8" fill="#174D4F" opacity="0.3"></circle>
+        </g>
+      </svg>
+    </div>
     <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,96px) 20px">
       <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
         <span style="font-family:var(--font-ui);font-size:0.8125rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-ocean)">EXECUTIVE SUMMARY</span>
@@ -108,7 +259,50 @@
   </section>
 
   <!-- ======= Background ======= -->
-  <section data-screen-label="Background" style="background:var(--surface-subtle);border-top:1px solid var(--border-subtle)">
+  <section data-screen-label="Background" style="position:relative;background:var(--surface-subtle);border-top:1px solid var(--border-subtle);overflow:hidden">
+    <div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+      <svg id="tgi-art-b" viewBox="0 0 1200 240" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom: 22px; right: -30px; width: min(52vw,660px); height: auto; opacity: 0.2; mix-blend-mode: multiply; -webkit-mask-image: linear-gradient(90deg,transparent 0%,#000 30%); mask-image: linear-gradient(90deg,transparent 0%,#000 30%)">
+        <path d="M206 120 H384" stroke="#246E72" stroke-width="1.5" stroke-dasharray="5 9" opacity="0.55"></path>
+        <path d="M520 120 H620" stroke="#246E72" stroke-width="1.5" stroke-dasharray="5 9" opacity="0.55"></path>
+        <rect x="40" y="78" width="150" height="88" rx="8" stroke="#174D4F" stroke-width="2.5"></rect>
+        <circle cx="78" cy="110" r="13" stroke="#174D4F" stroke-width="2"></circle>
+        <path d="M104 102 H170" stroke="#246E72" stroke-width="2"></path>
+        <path d="M104 118 H156" stroke="#246E72" stroke-width="2"></path>
+        <path d="M56 146 H148" stroke="#246E72" stroke-width="2" opacity="0.7"></path>
+        <rect x="400" y="76" width="104" height="92" rx="10" stroke="#174D4F" stroke-width="2.5"></rect>
+        <rect x="428" y="102" width="48" height="40" rx="4" stroke="#174D4F" stroke-width="2"></rect>
+        <path d="M420 76 V58 M441 76 V58 M462 76 V58 M483 76 V58" stroke="#174D4F" stroke-width="2"></path>
+        <path d="M420 168 V186 M441 168 V186 M462 168 V186 M483 168 V186" stroke="#174D4F" stroke-width="2"></path>
+        <path d="M400 94 H382 M400 112 H382 M400 130 H382 M400 148 H382" stroke="#174D4F" stroke-width="2"></path>
+        <path d="M504 94 H522 M504 112 H522 M504 130 H522 M504 148 H522" stroke="#174D4F" stroke-width="2"></path>
+        <g stroke="#246E72" stroke-width="1.5" opacity="0.5">
+          <path d="M640 120 L700 86 M640 120 L706 158 M700 86 L768 60 M700 86 L776 120 M706 158 L776 120 M706 158 L782 190"></path>
+          <path d="M768 60 L850 92 M776 120 L850 92 M776 120 L858 152 M782 190 L858 152 M850 92 L920 50 M850 92 L930 120"></path>
+          <path d="M858 152 L930 120 M858 152 L938 196 M920 50 L1000 84 M930 120 L1000 84 M930 120 L1010 156 M938 196 L1010 156"></path>
+          <path d="M1000 84 L1080 60 M1000 84 L1086 120 M1010 156 L1086 120 M1010 156 L1092 186 M1080 60 L1150 96 M1086 120 L1150 96 M1086 120 L1156 150 M1092 186 L1156 150"></path>
+        </g>
+        <g fill="#174D4F">
+          <circle cx="640" cy="120" r="4"></circle>
+          <circle cx="700" cy="86" r="3.5"></circle>
+          <circle cx="706" cy="158" r="3.5"></circle>
+          <circle cx="768" cy="60" r="3"></circle>
+          <circle cx="776" cy="120" r="3.2"></circle>
+          <circle cx="782" cy="190" r="3"></circle>
+          <circle cx="850" cy="92" r="3.2"></circle>
+          <circle cx="858" cy="152" r="3"></circle>
+          <circle cx="920" cy="50" r="2.6"></circle>
+          <circle cx="930" cy="120" r="3"></circle>
+          <circle cx="938" cy="196" r="2.6"></circle>
+          <circle cx="1000" cy="84" r="2.6"></circle>
+          <circle cx="1010" cy="156" r="2.6"></circle>
+          <circle cx="1080" cy="60" r="2.2"></circle>
+          <circle cx="1086" cy="120" r="2.4"></circle>
+          <circle cx="1092" cy="186" r="2.2"></circle>
+          <circle cx="1150" cy="96" r="1.9"></circle>
+          <circle cx="1156" cy="150" r="1.9"></circle>
+        </g>
+      </svg>
+    </div>
     <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,96px) 20px">
       <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
         <span style="font-family:var(--font-ui);font-size:0.8125rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-ocean)">BACKGROUND</span>
@@ -170,7 +364,7 @@
   </section>
 
   <!-- ======= What constitutes a data breach ======= -->
-  <section data-screen-label="What is a breach" style="position:relative;background:#FFFFFF;overflow:hidden">
+  <section data-screen-label="What is a breach" id="tgi-leak-scope" style="position:relative;background:#FFFFFF;overflow:hidden">
     <sc-if value="{{ showSectionArt }}" hint-placeholder-val="{{ true }}">
       <img src="assets/art-fingerprint.png" alt="" style="position:absolute;right:-190px;top:-190px;width:620px;opacity:0.55;pointer-events:none;user-select:none">
     </sc-if>
@@ -180,11 +374,99 @@
         <span style="flex:1;height:1px;background:var(--border-subtle);min-width:80px"></span>
       </div>
       <h2 data-reveal="" style="margin:28px 0 0;max-width:820px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.15;letter-spacing:-0.02em;color:var(--text-strong)">What constitutes a data breach?</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,3vw,40px);margin-top:28px;align-items:start">
+
+      <!-- BAND 1: intro paragraph + inline breach-mechanism visualization -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,52px);margin-top:28px;align-items:center">
+        <p data-reveal="" style="margin:0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">In plain terms, a data breach is when information about you ends up somewhere it was never supposed to go. The "how" varies: a hacker group breaks into a system and takes it, or an organization simply leaves a digital door open and data spills out by accident. The method and motive differ. What stays constant is the outcome - people's information outside the bounds it was meant to stay within, in hands it was never meant to reach.</p>
+        <figure id="tgi-breach-mech" data-breach="" aria-hidden="true" style="margin:0;position:relative;background:linear-gradient(180deg,#FFFFFF 0%,var(--surface-subtle) 100%);border:1px solid var(--border-subtle);border-radius:16px;padding:clamp(14px,2vw,20px) clamp(16px,2.2vw,24px) clamp(12px,1.6vw,16px);box-shadow:0 1px 2px rgba(16,32,31,0.06),0 22px 48px -30px rgba(16,32,31,0.45);overflow:hidden">
+          <div style="display:flex;align-items:center;gap:9px;margin:0 0 4px">
+            <span style="width:8px;height:8px;border-radius:50%;background:var(--tgi-grass);box-shadow:0 0 0 4px rgba(37,155,92,0.14)"></span>
+            <span style="font-family:var(--font-ui);font-size:0.6875rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--tgi-teal)">The breach mechanism</span>
+          </div>
+          <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+            <defs>
+              <radialGradient id="bmGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#8DD8C2" stop-opacity="0.85"></stop>
+                <stop offset="55%" stop-color="#8DD8C2" stop-opacity="0.32"></stop>
+                <stop offset="100%" stop-color="#8DD8C2" stop-opacity="0"></stop>
+              </radialGradient>
+            </defs>
+            <circle class="bm-glow" cx="150" cy="180" r="118" fill="url(#bmGlow)"></circle>
+            <g class="bm-trails" stroke="#246E72" stroke-width="1.6" fill="none" stroke-linecap="round">
+              <path class="bm-trail" pathLength="1" d="M232 180 Q238 180 250 60"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q266 180 330 44"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q294 180 410 66"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q309 180 452 40"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q253 180 292 118"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q281 180 372 96"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q307 180 446 128"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q256 180 300 300"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q238 180 250 210"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q275 180 356 210"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q305 180 440 196"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q288 180 392 268"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q256 180 300 250"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q309 180 452 300"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q275 180 356 330"></path>
+              <path class="bm-trail" pathLength="1" d="M232 180 Q238 180 250 330"></path>
+            </g>
+            <g class="bm-ends" fill="none" stroke-width="2">
+              <circle class="bm-end" cx="250" cy="60" r="8" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="330" cy="44" r="7" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="410" cy="66" r="9" stroke="#1C7D84"></circle>
+              <circle class="bm-end" cx="452" cy="40" r="7" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="292" cy="118" r="8" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="372" cy="96" r="9" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="446" cy="128" r="7" stroke="#1C7D84"></circle>
+              <circle class="bm-end" cx="300" cy="300" r="10" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="250" cy="210" r="8" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="356" cy="210" r="9" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="440" cy="196" r="8" stroke="#1C7D84"></circle>
+              <circle class="bm-end" cx="392" cy="268" r="7" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="300" cy="250" r="9" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="452" cy="300" r="8" stroke="#1C7D84"></circle>
+              <circle class="bm-end" cx="356" cy="330" r="10" stroke="#8DD8C2"></circle>
+              <circle class="bm-end" cx="250" cy="330" r="8" stroke="#8DD8C2"></circle>
+            </g>
+            <g class="bm-vault">
+              <rect class="bm-vaultbox" x="70" y="110" width="160" height="140" rx="18" fill="rgba(185,224,218,0.28)" stroke="#174D4F" stroke-width="2.5"></rect>
+              <path class="bm-crack" pathLength="1" d="M230 122 L216 148 L229 170 L215 196 L228 216 L214 238" fill="none" stroke="#174D4F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              <g class="bm-lock" fill="none" stroke="#174D4F" stroke-width="2.4" stroke-linecap="round">
+                <path d="M141 84 v-5 a9 9 0 0 1 18 0 v5"></path>
+                <rect x="137" y="84" width="26" height="20" rx="4" fill="#FFFFFF"></rect>
+                <circle cx="150" cy="95" r="2.4" fill="#174D4F" stroke="none"></circle>
+              </g>
+            </g>
+            <g class="bm-dots" fill="#174D4F">
+              <circle class="bm-dot" cx="96" cy="138" r="6"></circle>
+              <circle class="bm-dot" cx="132" cy="138" r="5"></circle>
+              <circle class="bm-dot" cx="168" cy="138" r="5"></circle>
+              <circle class="bm-dot" cx="204" cy="138" r="6"></circle>
+              <circle class="bm-dot" cx="96" cy="166" r="5"></circle>
+              <circle class="bm-dot" cx="132" cy="166" r="5"></circle>
+              <circle class="bm-dot" cx="168" cy="166" r="6"></circle>
+              <circle class="bm-dot" cx="204" cy="166" r="5"></circle>
+              <circle class="bm-dot" cx="96" cy="194" r="5"></circle>
+              <circle class="bm-dot" cx="132" cy="194" r="6"></circle>
+              <circle class="bm-dot" cx="168" cy="194" r="5"></circle>
+              <circle class="bm-dot" cx="204" cy="194" r="5"></circle>
+              <circle class="bm-dot" cx="96" cy="222" r="6"></circle>
+              <circle class="bm-dot" cx="132" cy="222" r="5"></circle>
+              <circle class="bm-dot" cx="168" cy="222" r="5"></circle>
+              <circle class="bm-dot" cx="204" cy="222" r="6"></circle>
+            </g>
+            <text x="150" y="274" text-anchor="middle" font-size="12.5" font-weight="700" letter-spacing="0.8" fill="#174D4F">SECURE SOURCE</text>
+            <text class="bm-exposed" x="398" y="20" text-anchor="middle" font-size="12.5" font-weight="700" letter-spacing="0.8" fill="#9A6A12">EXPOSED</text>
+          </svg>
+          <figcaption style="margin:8px 0 0;font-family:var(--font-body);font-size:0.8125rem;line-height:1.55;color:var(--text-muted);text-wrap:pretty">One protected store fractures — and the same records resurface scattered across places they were never meant to reach.</figcaption>
+        </figure>
+      </div>
+
+      <!-- BAND 2: statutory definition + consequences -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,3vw,40px);margin-top:clamp(32px,4vw,48px);align-items:start">
         <div>
-          <p data-reveal="" style="margin:0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">In plain terms, a data breach is when information about you ends up somewhere it was never supposed to go. The "how" varies: a hacker group breaks into a system and takes it, or an organization simply leaves a digital door open and data spills out by accident. The method and motive differ. What stays constant is the outcome - people's information outside the bounds it was meant to stay within, in hands it was never meant to reach.</p>
-          <div data-reveal="" style="margin-top:22px;background:var(--surface-subtle);border:1px solid var(--border-subtle);border-radius:12px;padding:24px 26px">
-            <p style="margin:0;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-teal)">Personal Data Protection Act, 2026</p>
+          <div data-reveal="" style="background:var(--surface-subtle);border:1px solid var(--border-subtle);border-radius:12px;padding:24px 26px">
+            <p style="margin:0;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-teal)"><a href="http://bdlaws.minlaw.gov.bd/act-1692/section-57268.html?lang=en">Personal Data Protection Act, 2026</a></p>
             <p style="margin:12px 0 0;font-family:var(--font-body);font-style:italic;font-size:1rem;line-height:1.7;color:var(--text-body)">"A personal data breach means a breach of security of personal data resulting in unauthorized access to or unlawful transfer, disclosure, alteration, or loss of or intrusion into any personal data processed under this Act, or in the absence of the necessary equipment for proper processing and storage."</p>
           </div>
           <p data-reveal="" style="margin:22px 0 0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">In most cases the information at stake is <strong style="color: var(--text-strong);">Personally Identifiable Information (PII)</strong>: any fact, or combination of facts, that can be traced back to a specific person -- a name, a phone number, an NID number, an address, digital payment details, or biometric data such as fingerprints and iris scans. The list is illustrative, not exhaustive.</p>
@@ -209,7 +491,7 @@
               <p style="margin:8px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:rgba(255,255,255,0.78)">Your biometrics: the patterns in your fingertips, the structure of your iris -- cannot be reset. Once exposed, they cannot be revoked.</p>
             </div>
           </div>
-          <p data-reveal="" style="margin:6px 0 0;font-family:var(--font-body);font-size:1rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">Once a single identity links every essential interaction, the convenience it delivers also carries visibility: the state can see, in one place, what each citizen does. A concentration of data is therefore not only a criminal's prize but also an instrument of surveillance and control. In cybersecurity terms, those who exploit such data are called <strong style="color:var(--text-strong)">threat actors</strong> — but the same concentrated data a fraudster would steal is also held, lawfully, by the state. Once a single identifier maps identity to activity, it lowers the cost of finding a target, monitoring dissent, and applying pressure at scale.</p>
+          <p data-reveal="" style="margin:6px 0 0;font-family:var(--font-body);font-size:1rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">Once a single identity links every essential interaction, the convenience it delivers also carries visibility: the state can see, in one place, what each citizen does. A concentration of data is therefore not only a criminal's prize but also an instrument of surveillance and control. In cybersecurity terms, those who exploit such data are called <strong style="color: var(--text-strong);"><a href="https://www.ibm.com/think/topics/threat-actor">threat actors</a></strong> — but the same concentrated data a fraudster would steal is also held, lawfully, by the state. Once a single identifier maps identity to activity, it lowers the cost of finding a target, monitoring dissent, and applying <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10953837/">pressure at scale</a>.</p>
         </div>
       </div>
     </div>
@@ -223,9 +505,9 @@
         <span style="flex:1;height:1px;background:var(--border-default);min-width:80px"></span>
       </div>
       <h2 data-reveal="" style="margin:28px 0 0;max-width:820px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.15;letter-spacing:-0.02em;color:var(--text-strong)">A near-even split between public and private targets</h2>
-      <p data-reveal="" style="margin:22px 0 0;max-width:820px;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">Tech Global Institute compiled a dossier of 65 documented breach incidents affecting Bangladeshi organizations between 2023 and 2026, drawn from four categories of sources: localised threat intelligence from Bangladesh Cyber Security Intelligence (BCSI); international dark-web and ransomware monitors (Ransomware.live, Ransomlook.io, RedPacket Security); threat-alert aggregators (Daily Dark Web on X); and national dailies including The Daily Star, Prothom Alo, and The Business Standard. For each incident, TGI logged the data exposed, the vector (where known), who discovered the breach, whether the organization acknowledged it, whether any post-mortem followed, and the verification status of the claim.</p>
+      
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:44px;align-items:stretch">
+      <p data-reveal="" style="margin:22px 0 0;max-width:820px;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">Tech Global Institute compiled a dossier of 65 documented breach incidents affecting Bangladeshi organizations between 2023 and 2026, drawn from four categories of sources: localised threat intelligence from <a href="https://www.cirt.gov.bd/">Bangladesh Cyber Security Intelligence (BCSI)</a>; international dark-web and ransomware monitors (<a href="https://ransomware.live/">Ransomware.live</a>, <a href="https://www.ransomlook.io/">Ransomlook.io</a>, <a href="https://www.redpacketsecurity.com/">RedPacket Security</a>); threat-alert aggregators (<a href="https://x.com/DailyDarkWeb">Daily Dark Web</a> on X); and national dailies including The Daily Star, Prothom Alo, and The Business Standard. For each incident, TGI logged the data exposed, the vector (where known), who discovered the breach, whether the organization acknowledged it, whether any post-mortem followed, and the verification status of the claim.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:44px;align-items:stretch">
         <!-- Grouped bar chart -->
         <div data-reveal="" style="background:#FFFFFF;border:1px solid var(--border-subtle);border-radius:12px;padding:28px;box-shadow:0 1px 2px rgba(16,32,31,0.06)">
           <h3 style="margin:0;font-family:var(--font-ui);font-weight:700;font-size:1rem;color:var(--text-strong)">Documented incidents by year and sector</h3>
@@ -314,7 +596,7 @@
           <p data-reveal="" style="margin:0;font-family:var(--font-ui);font-size:0.8125rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-teal)">Of particular concern</p>
           <div data-reveal="" style="background:var(--tgi-deep-teal);border-radius:12px;padding:26px 28px;box-shadow:0 8px 24px rgba(16,32,31,0.18)">
             <h3 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:1.15rem;line-height:1.3;color:#FFFFFF">The surveillance agency that was itself surveilled</h3>
-            <p style="margin:12px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.7;color:var(--text-on-dark-muted);text-wrap:pretty">The National Telecommunication Monitoring Centre (NTMC) is mandated to lawfully intercept phone calls, emails, and social media communications in support of criminal investigations by intelligence agencies, to filter and block online content linked to propaganda or criminal activity, and to support broader national security and public order objectives through communication intelligence. According to media sources, its system was exploited using the IDs of two law enforcement officers to collect and sell confidential information — NID details and mobile call data records — for financial gain. A breach at an agency of this nature is categorically different: the data is not merely personal or financial, but intercepted communications and surveillance records that could compromise the safety of individuals being monitored, reveal intelligence methods, or be exploited for blackmail and targeted harassment,&nbsp;or further unauthorized surveillance.</p>
+            <p style="margin:12px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.7;color:var(--text-on-dark-muted);text-wrap:pretty">The National Telecommunication Monitoring Centre (NTMC) is mandated to lawfully intercept phone calls, emails, and social media communications in support of criminal investigations by intelligence agencies, to filter and block online content linked to propaganda or criminal activity, and to support broader national security and public order objectives through communication intelligence. According to <a href="https://www.tbsnews.net/bangladesh/sensitive-public-data-breach-detected-2-police-officers-ids-used-857206"><b><i>media sources</i></b></a>, its system was exploited using the IDs of two law enforcement officers to collect and sell confidential information — NID details and mobile call data records — for financial gain. A breach at an agency of this nature is categorically different: the data is not merely personal or financial, but intercepted communications and surveillance records that could compromise the safety of individuals being monitored, reveal intelligence methods, or be exploited for blackmail and targeted harassment,&nbsp;or further unauthorized surveillance.</p>
           </div>
           <div data-reveal="" data-delay="120" style="background:#FFFFFF;border:1px solid var(--border-default);border-radius:12px;padding:26px 28px">
             <h3 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:1.15rem;line-height:1.3;color:var(--text-strong)">A ministry holding millions of migrant-worker records</h3><p style="margin:12px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">The breach reported at the Ministry of Expatriates' Welfare and Overseas Employment reportedly compromised passport records, NID information, eTIN details, and financial and banking documents —<i> <b>identity, tax, and financial information in a single dataset</b></i>. That combination could be exploited for&nbsp;multiple malicious purposes, including voter manipulation, blackmail, identity-based scams, and financial fraud targeting one of the country's most economically significant demographics.</p>
@@ -330,7 +612,34 @@
   </section>
 
   <!-- ======= Timeline of major incidents ======= -->
-  <section data-screen-label="Timeline" style="background:var(--surface-subtle);border-top:1px solid var(--border-subtle)">
+  <section data-screen-label="Timeline" style="position:relative;background:var(--surface-subtle);border-top:1px solid var(--border-subtle);overflow:hidden">
+    <div aria-hidden="true" style="position:absolute;top:70px;bottom:70px;right:12px;width:clamp(0px,calc((100vw - 1260px)/2),150px);opacity:0.2;pointer-events:none;overflow:hidden;mix-blend-mode:multiply">
+      <div style="position:absolute;left:calc(50% - 1px);top:0;bottom:0;width:2px;background:repeating-linear-gradient(180deg,#174D4F 0 12px,transparent 12px 22px);-webkit-mask-image:linear-gradient(180deg,#000 82%,transparent 100%);mask-image:linear-gradient(180deg,#000 82%,transparent 100%)"></div>
+      <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:14%;width:100%;height:auto">
+        <g id="tgi-burst">
+          <circle cx="70" cy="70" r="3.5" fill="#174D4F"></circle>
+          <circle cx="86" cy="56" r="2.6" fill="#1C7D84" opacity="0.85"></circle>
+          <circle cx="54" cy="60" r="2.6" fill="#259B5C" opacity="0.85"></circle>
+          <circle cx="94" cy="78" r="2.2" fill="#174D4F" opacity="0.7"></circle>
+          <circle cx="48" cy="84" r="2.2" fill="#174D4F" opacity="0.7"></circle>
+          <circle cx="78" cy="94" r="2.4" fill="#174D4F" opacity="0.75"></circle>
+          <circle cx="60" cy="42" r="1.9" fill="#174D4F" opacity="0.6"></circle>
+          <circle cx="98" cy="48" r="1.9" fill="#174D4F" opacity="0.55"></circle>
+          <circle cx="38" cy="64" r="1.9" fill="#174D4F" opacity="0.55"></circle>
+          <circle cx="102" cy="94" r="1.8" fill="#174D4F" opacity="0.5"></circle>
+          <circle cx="64" cy="106" r="1.8" fill="#174D4F" opacity="0.5"></circle>
+          <circle cx="90" cy="30" r="1.6" fill="#174D4F" opacity="0.4"></circle>
+          <circle cx="34" cy="94" r="1.6" fill="#174D4F" opacity="0.4"></circle>
+          <circle cx="108" cy="62" r="1.6" fill="#174D4F" opacity="0.4"></circle>
+          <path d="M70 70 L86 56" stroke="#174D4F" stroke-width="1.2" opacity="0.3"></path>
+          <path d="M70 70 L54 60" stroke="#174D4F" stroke-width="1.2" opacity="0.3"></path>
+          <path d="M70 70 L78 94" stroke="#174D4F" stroke-width="1.2" opacity="0.3"></path>
+          <path d="M70 70 L94 78" stroke="#174D4F" stroke-width="1.2" opacity="0.25"></path>
+        </g>
+      </svg>
+      <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:46%;width:100%;height:auto"><use href="#tgi-burst" transform="rotate(40 70 70)"></use></svg>
+      <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:77%;width:100%;height:auto"><use href="#tgi-burst" transform="rotate(-70 70 70)"></use></svg>
+    </div>
     <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,96px) 20px">
       <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
         <span style="font-family:var(--font-ui);font-size:0.8125rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-ocean)">A TIMELINE OF DATA BREACHES, CIRCA 2023–2026</span>
@@ -398,20 +707,20 @@
       <h2 data-reveal="" style="margin:28px 0 0;max-width:860px;font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.15;letter-spacing:-0.02em;color:#FFFFFF">What follows the breach is the most telling of all: Silence</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,56px);margin-top:28px;align-items:start">
         <div>
-          <p data-reveal="" style="margin:0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.75;color:var(--text-on-dark-muted);text-wrap:pretty">Without exception, the affected institutions have consistently failed to find the breach, not acknowledging it once others did, and never accounting for how it happened. What recurs across these years is a trend of concealment: breaches brushed over, denied, or left to fade, while the same failures — insecure databases, loose access controls, leaky third-party arrangements, compromised credentials — go unaddressed or are secretly patched because they are never openly named.</p>
-          <p data-reveal="" style="margin:18px 0 0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.75;color:var(--text-on-dark-muted);text-wrap:pretty">Aggregated totals also flatten the picture. A count of incidents tells you how often breaches happened, but not that the same target was hit deliberately, more than once — and it is in the repetition where intent shows itself. Several institutions were struck on separate occasions: the road-transport authority, the armed forces, the national police, and, most tellingly, the country's migrant-worker data systems.</p>
-          <p data-reveal="" style="margin:18px 0 0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.75;color:var(--text-on-dark-muted);text-wrap:pretty">Being breached twice within a span of weeks means either that the first breach taught the institution nothing, or that the attackers never left. When the pharmaceutical company Novo Nordisk was hacked, attackers accessed its code repository via an access token and carried out further intrusions for over two months. And the population exposed in Bangladesh's case is among the most vulnerable to follow-on fraud: migrant workers and their families, who already navigate recruitment agents, visa brokers, and overseas paperwork, are exactly the people a scammer armed with a leaked passport number can most easily deceive — with risks extending to proxy voting, manipulated postal ballots, and targeted voter suppression.</p>
+          
+          <p data-reveal="" style="margin:0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.75;color:var(--text-on-dark-muted);text-wrap:pretty">Without exception, the affected institutions have consistently <a href="https://www.thedailystar.net/business/news/shwapnos-database-hacked-40-lakh-customers-details-risk-4137566" style="font-weight: 600">failed to find the breach</a>, not acknowledging it once others did, and never accounting for how it happened. What recurs across these years is a trend of concealment: breaches brushed over, denied, or left to fade, while the same failures — insecure databases, loose access controls, leaky third-party arrangements, compromised credentials — go unaddressed or are secretly patched because they are never openly named.</p><p data-reveal="" style="margin:18px 0 0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.75;color:var(--text-on-dark-muted);text-wrap:pretty">Aggregated totals also flatten the picture. A count of incidents tells you how often breaches happened, but not that the same target was hit deliberately, more than once — and it is in the repetition where intent shows itself. Several institutions were struck on separate occasions: the road-transport authority, the armed forces, the national police, and, most tellingly, the country's migrant-worker data systems.</p>
+          <p data-reveal="" style="margin:18px 0 0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.75;color:var(--text-on-dark-muted);text-wrap:pretty">Being breached twice within a span of weeks means either that the first breach taught the institution nothing, or that the attackers never left. When the pharmaceutical company Novo Nordisk was <a href="https://qz.com/novo-nordisk-hack-fulcrumsec-extortion-data-theft-061726" style="font-weight: 600">hacked</a>, attackers accessed its code repository via an access token and carried out further intrusions for over two months. And the population exposed in Bangladesh's case is among the most vulnerable to follow-on fraud: migrant workers and their families, who already navigate recruitment agents, visa brokers, and overseas paperwork, are exactly the people a scammer armed with a leaked passport number can most easily deceive — with risks extending to proxy voting, manipulated postal ballots, and targeted voter suppression.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:16px">
           <div data-reveal="" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.16);border-radius:12px;padding:26px 28px">
             <p style="margin:0;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-mint)">The target worth returning to</p>
             <div style="display:flex;align-items:baseline;gap:10px;margin-top:14px"><span style="font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,3.6vw,2.8rem);line-height:1;color:#FFFFFF"><span data-count="3">3</span>×</span><span style="font-family:var(--font-ui);font-size:0.875rem;color:var(--text-on-dark-muted)">hits on migrant-worker databases in roughly six weeks (Apr–May 2026)</span></div>
-            <p style="margin:14px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:var(--text-on-dark-muted)">Together involving claims of well over a million migrant-worker records, passport details included.</p>
+            <p style="margin:14px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:var(--text-on-dark-muted)">Together involving claims of well over a million migrant-worker records, passport details <a href="https://www.brinztech.com/breach-alerts/brinztech-alert-ministry-of-expatriates-welfare-and-overseas-employment-bangladesh-sovereign-data-sale/" style="font-weight: 600; font-style: italic; opacity: 1">included</a>.</p>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
             <div data-reveal="" data-delay="100" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.16);border-radius:12px;padding:22px">
               <div style="font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,2.8vw,2.1rem);line-height:1;color:var(--tgi-mint)">$<span data-count="30">30</span>B+</div>
-              <p style="margin:10px 0 0;font-family:var(--font-ui);font-size:0.8125rem;line-height:1.5;color:var(--text-on-dark-muted)">Remittances in FY 2024–25 — a national record</p>
+              <p style="margin:10px 0 0;font-family:var(--font-ui);font-size:0.8125rem;line-height:1.5;color:var(--text-on-dark-muted)">Remittances in <a href="https://eastasiaforum.org/2026/06/23/households-lose-out-in-bangladeshs-remittance-boom/" style="font-weight: 600">FY 2024–25</a> — a national record</p>
             </div>
             <div data-reveal="" data-delay="200" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.16);border-radius:12px;padding:22px">
               <div style="font-family:var(--font-display);font-weight:800;font-size:clamp(1.6rem,2.8vw,2.1rem);line-height:1;color:var(--tgi-mint)">6.57%</div>
@@ -426,7 +735,10 @@
   </section>
 
   <!-- ======= Legal analysis ======= -->
-  <section data-screen-label="Legal analysis" style="background:#FFFFFF">
+  <section data-screen-label="Legal analysis" style="position:relative;background:#FFFFFF;overflow:hidden">
+    <div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+      <svg id="tgi-art-a2" viewBox="0 0 560 620" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; left: -44px; bottom: -44px; width: clamp(320px,32vw,500px); height: auto; opacity: 0.13; -webkit-mask-image: linear-gradient(245deg,transparent 0%,#000 30%); mask-image: linear-gradient(245deg,transparent 0%,#000 30%)"><use href="#tgi-doc-scatter"></use></svg>
+    </div>
     <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,96px) 20px">
       <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
         <span style="font-family:var(--font-ui);font-size:0.8125rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-ocean)">LEGAL ANALYSIS</span>
@@ -484,7 +796,12 @@
   </section>
 
   <!-- ======= SOPs ======= -->
-  <section data-screen-label="SOPs" style="background:var(--surface-subtle);border-top:1px solid var(--border-subtle)">
+  <section data-screen-label="SOPs" style="position:relative;background:var(--surface-subtle);border-top:1px solid var(--border-subtle);overflow:hidden">
+    <div aria-hidden="true" style="position:absolute;top:70px;bottom:70px;left:12px;width:clamp(0px,calc((100vw - 1260px)/2),150px);opacity:0.2;pointer-events:none;overflow:hidden;mix-blend-mode:multiply">
+      <div style="position:absolute;left:calc(50% - 1px);top:0;bottom:0;width:2px;background:repeating-linear-gradient(180deg,#174D4F 0 12px,transparent 12px 22px);-webkit-mask-image:linear-gradient(180deg,#000 82%,transparent 100%);mask-image:linear-gradient(180deg,#000 82%,transparent 100%)"></div>
+      <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:20%;width:100%;height:auto"><use href="#tgi-burst" transform="rotate(105 70 70)"></use></svg>
+      <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:62%;width:100%;height:auto"><use href="#tgi-burst" transform="rotate(-30 70 70)"></use></svg>
+    </div>
     <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,96px) 20px">
       <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
         <span style="font-family:var(--font-ui);font-size:0.8125rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-ocean)">SOPS AND WHY THEY MATTER</span>
@@ -494,8 +811,8 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,56px);margin-top:28px;align-items:start">
         <div>
           <p data-reveal="" style="margin:0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">Bangladesh's legal weakness has been compounded by an operational one. Standard operating procedures (SOPs) — foundational for accountability — tend to arrive after a system is already live, unevenly, or not at all. An SOP is essentially the law translated into daily discipline: the rules for vendor onboarding, access control, API governance, data retention, encryption, incident escalation, and breach notification. Without these fundamentals being formalized, even a sound statute remains abstract.</p>
-          <p data-reveal="" style="margin:18px 0 0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">The pattern runs through Bangladesh's largest exposures. The 2023 civil-registration leak came from an insecure public portal, found by an outside researcher rather than internal monitoring; the Smart NID Telegram leak was traced to third parties holding authorised verification access; and the NTMC database sat open for months. Each points to the same missing guardrails: pre-launch security review, partner due diligence, least-privilege access, retention limits, continuous monitoring, and rapid notification. None are exotic; all are what mature systems institutionalise before they scale.</p>
-          <p data-reveal="" style="margin:18px 0 0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty"><b>The deeper gap:</b> even where procedures exist on paper, nothing independently confirms they work. Mature digital states close that gap with independent external certification — information-security management certified to ISO/IEC 27001 for the institutions themselves, and SOC 2 assurance reports demanded of the vendors and cloud providers that build and host their systems (the layer where several of Bangladesh's exposures originated). Bangladesh's 2026 laws now reference standards, audits, and breach handling, but they neither mandate recurring, independent verification nor make pre-deployment SOPs a condition of going live.</p>
+          <p data-reveal="" style="margin:18px 0 0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">The pattern runs through Bangladesh's largest exposures. The 2023 civil-registration leak came from an insecure public portal, found by an outside researcher rather than internal monitoring; the Smart NID Telegram leak was traced to third parties holding authorised verification access; and the NTMC database sat open for months. Each points to the same missing guardrails: <a href="https://www.cisa.gov/resources-tools/resources/secure-by-design" style="font-weight: 600">pre-launch security review</a>, <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf" style="font-weight: 600">partner due diligence</a>, least-privilege access, retention limits, continuous monitoring, and rapid notification. None are exotic; all are what mature systems institutionalise before they scale.</p><p data-reveal="" style="margin:18px 0 0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty"><b>The deeper gap:</b> even where procedures exist on paper, nothing independently confirms they work. Mature digital states close that gap with independent external certification — <a href="https://www.iso.org/standard/27001" style="font-weight: 600;">information-security management</a> certified to ISO/IEC 27001 for the institutions themselves, and <a href="https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022" style="font-weight: 600">SOC 2 assurance</a> reports demanded of the vendors and cloud providers that build and host their systems (the layer where several of Bangladesh's exposures originated). Bangladesh's 2026 laws now reference standards, audits, and breach handling, but they neither mandate recurring, independent verification nor make pre-deployment SOPs a condition of going live.</p>
+          
         </div>
         <div data-reveal="" data-delay="120" style="background:#FFFFFF;border:1px solid var(--border-subtle);border-radius:12px;padding:28px;box-shadow:0 1px 2px rgba(16,32,31,0.06)">
           <p style="margin:0 0 18px;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-teal)">The missing guardrails, incident by incident</p>
@@ -551,7 +868,19 @@
   </section>
 
   <!-- ======= Uneven future ======= -->
-  <section data-screen-label="Uneven future" style="background:var(--surface-subtle);border-top:1px solid var(--border-subtle)">
+  <section data-screen-label="Uneven future" style="position:relative;background:var(--surface-subtle);border-top:1px solid var(--border-subtle);overflow:hidden">
+    <div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+      <svg id="tgi-art-d" viewBox="0 0 1200 280" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet" style="position:absolute;left:0;bottom:-6px;width:100%;height:auto;max-height:48%;opacity:0.16;mix-blend-mode:multiply;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 48%);mask-image:linear-gradient(180deg,transparent 0%,#000 48%)">
+        <path d="M0 36 H452 C560 36 600 22 690 36 C780 50 820 16 910 34 C1000 52 1050 20 1200 34" stroke="#174D4F" stroke-width="2" opacity="0.55"></path>
+        <path d="M0 66 H436 C540 66 590 48 685 66 C775 84 830 40 915 62 C1005 84 1060 42 1200 62" stroke="#174D4F" stroke-width="2" opacity="0.62"></path>
+        <path d="M0 96 H420 C530 96 575 74 675 96 C770 118 835 62 920 92 C1010 118 1070 62 1200 92" stroke="#1C7D84" stroke-width="2" opacity="0.68"></path>
+        <path d="M0 126 H404 C520 126 565 100 668 126 C765 152 840 88 925 122 C1015 152 1080 84 1200 120" stroke="#174D4F" stroke-width="2" opacity="0.75"></path>
+        <path d="M0 156 H388 C510 156 555 126 660 156 C760 186 845 112 930 152 C1020 186 1090 106 1200 148" stroke="#174D4F" stroke-width="2" opacity="0.82"></path>
+        <path d="M0 186 H372 C500 186 548 152 652 186 C755 220 850 136 935 182 C1025 222 1100 128 1200 176" stroke="#246E72" stroke-width="2" opacity="0.88"></path>
+        <path d="M0 216 H356 C490 216 540 178 645 216 C748 252 855 160 940 212 C1030 258 1110 150 1200 204" stroke="#174D4F" stroke-width="2" opacity="0.94"></path>
+        <path d="M0 246 H340 C480 246 532 204 638 246 C742 286 860 184 945 242 C1035 292 1120 172 1200 232" stroke="#174D4F" stroke-width="2"></path>
+      </svg>
+    </div>
     <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,96px) 20px">
       <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
         <span style="font-family:var(--font-ui);font-size:0.8125rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-ocean)">LOOKING AHEAD</span>
@@ -676,6 +1005,32 @@
     </div>
   </section>
 
+  <!-- ======= Authors / byline ======= -->
+  <section data-screen-label="Authors" style="background:#FFFFFF;border-top:1px solid var(--border-subtle)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(44px,6vw,72px) 20px">
+      <div data-reveal="" style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+        <span style="font-family:var(--font-ui);font-size:0.8125rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-ocean)">AUTHORED BY</span>
+        <span style="flex:1;height:1px;background:var(--border-subtle);min-width:80px"></span>
+      </div>
+      <div data-reveal="" style="margin-top:26px;display:flex;flex-wrap:wrap;gap:clamp(16px,2.4vw,24px)">
+        <div style="display:flex;align-items:center;gap:16px;background:var(--surface-subtle);border:1px solid var(--border-subtle);border-radius:14px;padding:16px 28px 16px 16px;flex:1 1 260px;min-width:230px;box-shadow:0 1px 2px rgba(16,32,31,0.05)">
+          <span style="flex:0 0 auto;width:54px;height:54px;border-radius:50%;background:var(--tgi-deep-teal);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:1.05rem;letter-spacing:0.03em;color:var(--tgi-mint)">AD</span>
+          <div style="min-width:0">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.1rem,1.7vw,1.3rem);line-height:1.2;color:var(--text-strong)"><a href="https://techglobalinstitute.com/members/apon-das/" style="color: var(--tgi-black)">Apon Das</a></div>
+            <div style="margin-top:5px;font-family:var(--font-ui);font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--tgi-teal)">RESEARCHER, INFORMATION INTEGRITY</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;background:var(--surface-subtle);border:1px solid var(--border-subtle);border-radius:14px;padding:16px 28px 16px 16px;flex:1 1 260px;min-width:230px;box-shadow:0 1px 2px rgba(16,32,31,0.05)">
+          <span style="flex:0 0 auto;width:54px;height:54px;border-radius:50%;background:var(--tgi-deep-teal);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:1.05rem;letter-spacing:0.03em;color:var(--tgi-mint)">KA</span>
+          <div style="min-width:0">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.1rem,1.7vw,1.3rem);line-height:1.2;color:var(--text-strong)"><a href="https://techglobalinstitute.com/members/kalim-ahmed/" style="color: var(--tgi-black)">Kalim Ahmed</a></div>
+            <div style="margin-top:5px;font-family:var(--font-ui);font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--tgi-teal)">RESEARCH MANAGER</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ======= Footer ======= -->
   <footer style="position:relative;background:var(--tgi-deep-teal);color:#FFFFFF;overflow:hidden">
     <sc-if value="{{ showSectionArt }}" hint-placeholder-val="{{ true }}">
@@ -691,6 +1046,13 @@
           <p style="margin:0;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-mint)">Contact</p>
           <p style="margin:0;font-family:var(--font-ui);font-size:0.875rem;line-height:1.7;color:var(--text-on-dark-muted)">8 Brunswick Street<br>Brampton, ON L6X 4Y6, Canada</p>
           <a href="mailto:info@techglobalinstitute.com" style="font-family:var(--font-ui);font-size:0.875rem;color:var(--tgi-mint)" style-hover="color:#FFFFFF">info@techglobalinstitute.com</a>
+          <p style="margin:10px 0 0;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-mint)">Follow</p>
+          <div style="margin-top:2px;display:flex;gap:10px;flex-wrap:wrap">
+            <a href="https://www.facebook.com/profile.php?id=61565698961621" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.10);color:#FFFFFF;transition:background 160ms cubic-bezier(0.4,0,0.2,1),color 160ms cubic-bezier(0.4,0,0.2,1),transform 120ms cubic-bezier(0.4,0,0.2,1)" style-hover="background:var(--tgi-mint);color:var(--tgi-deep-teal)" style-active="transform:translateY(1px)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v.874h3.634l-.485 2.05-.516 1.617h-2.633v7.98H9.101z"></path></svg></a>
+            <a href="https://www.instagram.com/techglobalinstitute.tgi" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.10);color:#FFFFFF;transition:background 160ms cubic-bezier(0.4,0,0.2,1),color 160ms cubic-bezier(0.4,0,0.2,1),transform 120ms cubic-bezier(0.4,0,0.2,1)" style-hover="background:var(--tgi-mint);color:var(--tgi-deep-teal)" style-active="transform:translateY(1px)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"></path></svg></a>
+            <a href="https://x.com/techglobalinst" target="_blank" rel="noopener" aria-label="X (formerly Twitter)" title="X (formerly Twitter)" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.10);color:#FFFFFF;transition:background 160ms cubic-bezier(0.4,0,0.2,1),color 160ms cubic-bezier(0.4,0,0.2,1),transform 120ms cubic-bezier(0.4,0,0.2,1)" style-hover="background:var(--tgi-mint);color:var(--tgi-deep-teal)" style-active="transform:translateY(1px)"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+            <a href="ca.linkedin.com/company/techglobal-institute" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.10);color:#FFFFFF;transition:background 160ms cubic-bezier(0.4,0,0.2,1),color 160ms cubic-bezier(0.4,0,0.2,1),transform 120ms cubic-bezier(0.4,0,0.2,1)" style-hover="background:var(--tgi-mint);color:var(--tgi-deep-teal)" style-active="transform:translateY(1px)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>
+          </div>
         </div>
       </div>
       <div style="margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.16);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
@@ -747,6 +1109,7 @@ class Component extends DCLogic {
           });
         }
         if (el.hasAttribute('data-count')) this.runCounter(el, delay);
+        if (el.hasAttribute('data-breach')) el.classList.add('is-active');
       });
     }, { threshold: 0.18 });
     this._io = io;
@@ -768,6 +1131,11 @@ class Component extends DCLogic {
       io.observe(el);
     });
     document.querySelectorAll('[data-count]').forEach((el) => {
+      if (this._fxDone.has(el)) return;
+      this._fxDone.add(el);
+      io.observe(el);
+    });
+    document.querySelectorAll('[data-breach]').forEach((el) => {
       if (this._fxDone.has(el)) return;
       this._fxDone.add(el);
       io.observe(el);
