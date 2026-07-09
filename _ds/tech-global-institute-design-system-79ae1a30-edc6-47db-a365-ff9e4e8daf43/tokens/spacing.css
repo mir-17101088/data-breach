@@ -1,0 +1,45 @@
+/* Tech Global Institute — Spacing, radius, shadow, layout tokens */
+
+:root {
+  /* ---- Spacing scale (4px base grid) ---- */
+  --space-0:   0;
+  --space-1:   0.25rem;  /* 4  */
+  --space-2:   0.5rem;   /* 8  */
+  --space-3:   0.75rem;  /* 12 */
+  --space-4:   1rem;     /* 16 */
+  --space-5:   1.5rem;   /* 24 */
+  --space-6:   2rem;     /* 32 */
+  --space-7:   3rem;     /* 48 */
+  --space-8:   4rem;     /* 64 */
+  --space-9:   6rem;     /* 96 */
+
+  /* ---- Corner radii ---- */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   20px;
+  --radius-pill: 999px;
+
+  /* ---- Border widths ---- */
+  --border-width:      1px;
+  --border-width-thick: 2px;
+
+  /* ---- Shadows (soft, low-chroma teal-tinted) ---- */
+  --shadow-xs: 0 1px 2px rgba(16,32,31,0.06);
+  --shadow-sm: 0 1px 3px rgba(16,32,31,0.08), 0 1px 2px rgba(16,32,31,0.06);
+  --shadow-md: 0 4px 12px rgba(16,32,31,0.10);
+  --shadow-lg: 0 10px 30px rgba(16,32,31,0.12);
+
+  /* ---- Layout ---- */
+  --container-sm:  640px;
+  --container-md:  820px;   /* reading measure for briefs */
+  --container-lg:  1120px;
+  --container-xl:  1280px;
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-out:      cubic-bezier(0, 0, 0.2, 1);    /* @kind other */
+  --dur-fast:      120ms; /* @kind other */
+  --dur-base:      200ms; /* @kind other */
+  --dur-slow:      320ms; /* @kind other */
+}

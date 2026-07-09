@@ -1,0 +1,46 @@
+/* Tech Global Institute — Typography tokens
+   Montserrat = display (slides/posters), Roboto = UI/web/social, Lato = long-form body. */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Montserrat', system-ui, sans-serif;   /* headlines, bold, campaign */
+  --font-ui:      'Roboto', system-ui, sans-serif;        /* web + product UI, social */
+  --font-body:    'Lato', Georgia, system-ui, sans-serif; /* essays, policy briefs */
+  --font-mono:    'Roboto Mono', ui-monospace, monospace;
+
+  /* ---- Weights ---- */
+  --fw-light:     300;     /* @kind font */
+  --fw-regular:   400;     /* @kind font */
+  --fw-medium:    500;     /* @kind font */
+  --fw-semibold:  600;     /* @kind font */
+  --fw-bold:      700;     /* @kind font */
+  --fw-extrabold: 800;     /* @kind font */
+
+  /* ---- Type scale (rem, 16px base) ---- */
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.875rem;  /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-md:   1.125rem;  /* 18px */
+  --text-lg:   1.375rem;  /* 22px */
+  --text-xl:   1.75rem;   /* 28px */
+  --text-2xl:  2.25rem;   /* 36px */
+  --text-3xl:  3rem;      /* 48px */
+  --text-4xl:  4rem;      /* 64px */
+
+  /* ---- Line heights ---- */
+  --leading-tight:   1.1;
+  --leading-snug:    1.25;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.7;   /* long-form body */
+
+  /* ---- Letter spacing ---- */
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-caps:   0.08em;  /* uppercase labels/eyebrows */
+
+  /* ---- Semantic roles ---- */
+  --role-display-font: var(--font-display);
+  --role-heading-font: var(--font-ui);
+  --role-body-font:    var(--font-body);
+}

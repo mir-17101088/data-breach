@@ -1,0 +1,6 @@
+/* Tech Global Institute — Webfonts
+   All three brand typefaces are available on Google Fonts, so we load them
+   directly from Google's CDN. Montserrat = display/headlines (slides, posters),
+   Roboto = UI / web / social headings + text, Lato = long-form body (briefs, essays). */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Mono:wght@400;500&display=swap');

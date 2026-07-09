@@ -1,0 +1,73 @@
+/* Tech Global Institute — Color tokens
+   Sourced verbatim from the Brand Kit palette (Deep Teal primary, Mint & Sage accents).
+   Base palette first, then semantic aliases. */
+
+:root {
+  /* ---- Base palette (exact brand hex) ---- */
+  --tgi-black:        #000000; /* Text, high-contrast elements */
+  --tgi-navy:         #1F2A44; /* Headlines, primary buttons */
+  --tgi-deep-teal:    #174D4F; /* PRIMARY. Footer, headers, dark background */
+  --tgi-teal:         #246E72; /* Brand primary, illustrations */
+  --tgi-ocean:        #1C7D84; /* Highlights, hyperlinks */
+  --tgi-grass:        #259B5C; /* CTA buttons, success state */
+  --tgi-mint:         #8DD8C2; /* Backgrounds, secondary highlights */
+  --tgi-pale-mint:    #A7DED1; /* Hover states, backgrounds */
+  --tgi-aqua:         #B9E0DA; /* Cards, soft UI elements */
+  --tgi-sage:         #B1C9AC; /* Backgrounds, infographics */
+  --tgi-white:        #FFFFFF;
+
+  /* ---- Neutral ramp (derived from navy/teal for UI chrome) ---- */
+  --tgi-ink-900:      #10201F; /* near-black warm ink */
+  --tgi-ink-700:      #2C3B3A;
+  --tgi-gray-500:     #5C6B6A;
+  --tgi-gray-300:     #9AA7A5;
+  --tgi-gray-200:     #C7D0CE;
+  --tgi-gray-100:     #E6ECEA;
+  --tgi-gray-50:      #F3F6F5;
+
+  /* ---- Semantic surfaces ---- */
+  --surface-page:        var(--tgi-white);
+  --surface-subtle:      var(--tgi-gray-50);
+  --surface-card:        var(--tgi-white);
+  --surface-soft:        var(--tgi-aqua);      /* soft UI / info cards */
+  --surface-accent:      var(--tgi-mint);      /* secondary highlight blocks */
+  --surface-sage:        var(--tgi-sage);      /* infographic / muted blocks */
+  --surface-dark:        var(--tgi-deep-teal); /* footers, dark sections */
+  --surface-dark-alt:    var(--tgi-teal);
+
+  /* ---- Semantic text ---- */
+  --text-strong:     var(--tgi-navy);      /* headlines */
+  --text-body:       var(--tgi-ink-700);   /* body copy */
+  --text-muted:      var(--tgi-gray-500);
+  --text-on-dark:    var(--tgi-white);
+  --text-on-dark-muted: rgba(255,255,255,0.72);
+  --text-link:       var(--tgi-ocean);     /* hyperlinks */
+  --text-link-hover: var(--tgi-deep-teal);
+
+  /* ---- Interactive / brand ---- */
+  --brand-primary:       var(--tgi-deep-teal);
+  --brand-primary-hover: #123c3e;
+  --brand-secondary:     var(--tgi-teal);
+  --accent-cta:          var(--tgi-grass);   /* CTA buttons */
+  --accent-cta-hover:    #1f8a4f;
+  --accent-link:         var(--tgi-ocean);
+
+  /* ---- Feedback / states ---- */
+  --state-success:   var(--tgi-grass);
+  --state-success-bg: #E4F3EA;
+  --state-info:      var(--tgi-ocean);
+  --state-info-bg:   var(--tgi-aqua);
+  --state-warning:   #C98A21;
+  --state-warning-bg: #FBF0DA;
+  --state-danger:    #C0453B;
+  --state-danger-bg: #F8E4E2;
+
+  /* ---- Borders / dividers ---- */
+  --border-subtle:   var(--tgi-gray-100);
+  --border-default:  var(--tgi-gray-200);
+  --border-strong:   var(--tgi-navy);
+  --border-focus:    var(--tgi-ocean);
+
+  /* ---- Focus ring ---- */
+  --focus-ring:      0 0 0 3px rgba(28,125,132,0.35);
+}
