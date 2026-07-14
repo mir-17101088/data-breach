@@ -11,9 +11,13 @@ host or web server (Nginx, Apache, S3/CloudFront, Netlify, GitHub Pages, etc.).
 Upload these, **preserving the folder structure** (all asset paths are relative):
 
 index.html            ← the report
+
 support.js            ← runtime helper (loaded first in <head>)
+
 incidents-data.js     ← the full 68-incident dataset (appendix table)
+
 assets/               ← images (hero, logos, section art, stage cards)
+
 _ds/                  ← design system: fonts, color/spacing tokens, styles, JS bundle
 
 
