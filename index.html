@@ -742,20 +742,36 @@
 
         /* ===== "Four interlocking deficiencies" (#tgi-legal-deficiencies) =====
            These cards used to stack in a narrow right-hand column beside the legal
-           prose. They now run full-width beneath it, so they pair up two-per-row on
-           desktop and keep a readable measure. `align-items: start` lets each card end
-           at its own content — card 01 is markedly longer than 02–04, and stretching
-           the others to match would leave dead space inside their borders. Below 900px
-           two columns no longer hold a comfortable measure, so it drops to one. */
+           prose; they now run full-width beneath it. Card 01 is roughly 2.5x the length
+           of the others, so it spans the whole row as the section's anchor and 02–04
+           sit three-up below it. Pairing 01 with a short card instead strands ~300px of
+           dead space beside it. Cards inherit the default `stretch`, so each row of
+           siblings shares a height and their bottoms align.
+           Ladder: 3-up → 2-up (01 and 04 span) → stacked. */
         #tgi-legal-deficiencies {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          align-items: start;
+          grid-template-columns: repeat(3, 1fr);
           gap: 16px;
           margin-top: 16px;
         }
 
-        @media (max-width: 900px) {
+        /* Card 01 spans the full row at every breakpoint. */
+        #tgi-legal-deficiencies> :first-child {
+          grid-column: 1 / -1;
+        }
+
+        @media (max-width: 1080px) {
+          #tgi-legal-deficiencies {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          /* With 02 and 03 paired, 04 would otherwise sit alone beside a gap. */
+          #tgi-legal-deficiencies> :last-child {
+            grid-column: 1 / -1;
+          }
+        }
+
+        @media (max-width: 780px) {
           #tgi-legal-deficiencies {
             grid-template-columns: 1fr;
           }
