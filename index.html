@@ -15,8 +15,7 @@
        origin (no trailing slash) to make og:url/og:image absolute.
        ============================================================ -->
   <title>BREACHED AND UNANSWERED — Data Breaches in Bangladesh, 2023–2026 | Tech Global Institute</title>
-  <meta name="description"
-    content="A Cartography of Bangladesh's Data Breach Epidemic and the Accountability Deficit, 2023–2026.">
+  <meta name="description" content="A Cartography of Bangladesh's Data Breach Epidemic.">
   <meta name="theme-color" content="#174D4F">
   <link rel="canonical" href="https://REPLACE_WITH_PRODUCTION_ORIGIN/">
 
@@ -24,8 +23,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Tech Global Institute">
   <meta property="og:title" content="BREACHED AND UNANSWERED">
-  <meta property="og:description"
-    content="A Cartography of Bangladesh's Data Breach Epidemic and the Accountability Deficit, 2023–2026">
+  <meta property="og:description" content="A Cartography of Bangladesh's Data Breach Epidemic.">
   <meta property="og:url" content="https://REPLACE_WITH_PRODUCTION_ORIGIN/">
   <meta property="og:image" content="https://REPLACE_WITH_PRODUCTION_ORIGIN/assets/hero_image.png">
   <meta property="og:image:alt" content="Breached and Unanswered — a cartography of Bangladesh's data breach epidemic">
@@ -33,8 +31,7 @@
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BREACHED AND UNANSWERED">
-  <meta name="twitter:description"
-    content="A Cartography of Bangladesh's Data Breach Epidemic and the Accountability Deficit, 2023–2026">
+  <meta name="twitter:description" content="A Cartography of Bangladesh's Data Breach Epidemic.">
   <meta name="twitter:image" content="https://REPLACE_WITH_PRODUCTION_ORIGIN/assets/hero_image.png">
 
   <script src="./support.js"></script>
@@ -743,6 +740,27 @@
           }
         }
 
+        /* ===== "Four interlocking deficiencies" (#tgi-legal-deficiencies) =====
+           These cards used to stack in a narrow right-hand column beside the legal
+           prose. They now run full-width beneath it, so they pair up two-per-row on
+           desktop and keep a readable measure. `align-items: start` lets each card end
+           at its own content — card 01 is markedly longer than 02–04, and stretching
+           the others to match would leave dead space inside their borders. Below 900px
+           two columns no longer hold a comfortable measure, so it drops to one. */
+        #tgi-legal-deficiencies {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          align-items: start;
+          gap: 16px;
+          margin-top: 16px;
+        }
+
+        @media (max-width: 900px) {
+          #tgi-legal-deficiencies {
+            grid-template-columns: 1fr;
+          }
+        }
+
         /* Back-to-top: hidden until the reader scrolls past the hero.
            JS (_onScroll) toggles .is-visible; fade handled by the button's
            own inline transition (opacity/visibility). */
@@ -821,8 +839,7 @@
             BREACHED AND UNANSWERED</h1>
           <p
             style="margin:26px 0 0;max-width:760px;font-family:var(--font-display);font-weight:600;font-size:clamp(1.2rem,2.3vw,1.65rem);line-height:1.45;letter-spacing:-0.01em;color:#FFFFFF;text-shadow:0 2px 16px rgba(0,0,0,0.6);animation:tgiFadeUp 700ms cubic-bezier(0.4,0,0.2,1) 240ms both">
-            A Cartography of Bangladesh's Data Breach Epidemic <span style="color:var(--tgi-mint)">and the
-              Accountability Deficit, 2023–2026</span></p>
+            A Cartography of Bangladesh's <span style="color:var(--tgi-mint)">Data Breach Epidemic</span></p>
           <div
             style="margin-top:clamp(16px,2.4vw,22px);max-width:960px;animation:tgiFadeUp 700ms cubic-bezier(0.4,0,0.2,1) 360ms both">
             <p
@@ -2064,13 +2081,16 @@
                 and, most tellingly for what follows, the country's migrant-worker data systems.</p>
               <p data-reveal=""
                 style="margin: 18px 0 0; font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.75; color: var(--text-on-dark-muted); text-wrap: pretty; font-weight: 400">
-                The population exposed is among the most vulnerable to follow-on fraud: <i><b>migrant workers and their
-                    families</b></i>, who already navigate multiple middle players and associates, are exactly the
-                people a scammer armed with a leaked passport number and other PII can most easily deceive. It is
-                equally concerning in a democratic context, as malicious actors can exploit the personal credentials of
-                citizens living abroad to engineer proxy voting, manipulate postal ballots, or execute targeted voter
-                suppression. Given the large number of overseas Bangladeshis, such breaches pose significant risks to
-                the integrity and credibility of national elections.</p>
+              <p
+                style="margin:0;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-mint)">
+                The migrant database</p>
+              The population exposed is among the most vulnerable to follow-on fraud: migrant workers and their
+              families, who already navigate multiple middle players and associates, are exactly the
+              people a scammer armed with a leaked passport number and other PII can most easily deceive. It is
+              equally concerning in a democratic context, as malicious actors can exploit the personal credentials of
+              citizens living abroad to engineer proxy voting, manipulate postal ballots, or execute targeted voter
+              suppression. Given the large number of overseas Bangladeshis, such breaches pose significant risks to
+              the integrity and credibility of national elections.</p>
             </div>
             <div style="display:flex;flex-direction:column;gap:16px">
               <div data-reveal=""
@@ -2214,8 +2234,11 @@
             </div>
           </div>
 
-          <div
-            style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,4vw,56px);margin-top:36px;align-items:start">
+          <!-- Legal-analysis body: one full-width column at every breakpoint. Reading order
+               runs statutory review → the 2026 suite → the four deficiencies that suite
+               leaves unresolved → the closing verdict, so the cards sit directly under the
+               paragraph that sets them up rather than in a parallel side column. -->
+          <div style="margin-top:36px">
             <div>
               <p data-reveal=""
                 style="margin:0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">
@@ -2304,95 +2327,20 @@
                   short</a> of ensuring meaningful accountability in <a
                   href="https://techglobalinstitute.com/announcements/tgis-statement-on-the-draft-personal-data-protection-ordinance-2025-and-the-draft-national-data-management-ordinance-2025/">several
                   respects</a> that remain central to any serious legal diagnosis.</p>
-              <div data-reveal=""
-                style="margin-top:24px;background:var(--surface-subtle);border:1px solid var(--border-subtle);border-radius:12px;padding:24px 26px">
-                <p
-                  style="margin:0;font-family:var(--font-body);font-size:1rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">
-                  <strong style="color:var(--text-strong)">Viewed collectively, the laws assessed leave an
-                    accountability vacuum.</strong> Statutory obligations exist, and remedial provisions are drafted,
-                  but who bears responsibility for a breach, through which forum liability is to be established, and
-                  under what timeline enforcement is to occur remain legally unsettled. Until the transitional
-                  provisions are activated, the interlocking relationship between administrative, civil, and criminal
-                  remedies is clarified, the interpretation of the exemptions is settled, and the independence of the
-                  enforcing authority from public-sector fiduciaries is institutionally secured, Bangladesh's data
-                  protection regime is likely to remain — as the pattern across the 68 documented incidents, the
-                  overwhelming majority of them never publicly investigated, remediated, or even acknowledged, suggests
-                  — a framework of formal rights without a corresponding structure of practical enforcement.
-                </p>
-              </div>
             </div>
-            <div style="display:flex;flex-direction:column;gap:16px">
-              <p data-reveal=""
-                style="margin:0;font-family:var(--font-ui);font-size:0.8125rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-teal)">
-                Four interlocking deficiencies</p>
-              <div data-reveal=""
-                style="background:#FFFFFF;border:1px solid var(--border-default);border-radius:12px;padding:24px 26px;display:flex;gap:18px;align-items:flex-start">
+
+            <p data-reveal=""
+              style="margin:36px 0 0;font-family:var(--font-ui);font-size:0.8125rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-teal)">
+              Four interlocking deficiencies</p>
+            <div id="tgi-legal-deficiencies">
+              <div data-reveal="" data-delay=""
+                style="background:var(--tgi-deep-teal);border-radius:12px;padding:24px 26px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 8px 24px rgba(16,32,31,0.18)">
                 <span
                   style="flex:0 0 auto;font-family:var(--font-display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--tgi-mint)">1</span>
                 <div>
                   <h3
-                    style="margin:0;font-family:var(--font-ui);font-weight:700;font-size:1rem;line-height:1.4;color:var(--text-strong)">
-                    The remedies are not yet switched on</h3>
-                  <p
-                    style="margin:8px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
-                    Implementation is subject to <a
-                      href="http://bdlaws.minlaw.gov.bd/act-1692/section-57267.html">delayed commencement</a> leaving
-                    key elements of the enforcement and institutional framework in abeyance even
-                    after enactment. As a result, failures to comply with the breach notification obligation during the
-                    transitional period may not attract regulatory scrutiny or statutory penalties, nor can incidents
-                    occurring during that period be sanctioned retrospectively once the law becomes fully operational.
-                  </p>
-                </div>
-              </div>
-              <div data-reveal="" data-delay="100"
-                style="background:#FFFFFF;border:1px solid var(--border-default);border-radius:12px;padding:24px 26px;display:flex;gap:18px;align-items:flex-start">
-                <span
-                  style="flex:0 0 auto;font-family:var(--font-display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--tgi-mint)">2</span>
-                <div>
-                  <h3
-                    style="margin:0;font-family:var(--font-ui);font-weight:700;font-size:1rem;line-height:1.4;color:var(--text-strong)">
-                    Regulator-centred, not victim-centred</h3>
-                  <p
-                    style="margin:8px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
-                    The statute does not establish an independent civil cause of action for data breach through which
-                    affected individuals may seek relief before the ordinary courts without first engaging the
-                    regulatory authority, nor does it clarify how the compensation mechanism, <a
-                      href="http://bdlaws.minlaw.gov.bd/act-1692/section-57301.html">prescribed without defined
-                      parameters</a>, could be operationalised in practice. Additionally, the scale of available
-                    administrative penalties may not fully correspond to the scale of harm: maximum fines ranging
-                    between BDT 2.5 million and 5 million may be insufficient for large-scale data controllers
-                    processing population-level personal and sensitive data. </p>
-                </div>
-              </div>
-              <div data-reveal="" data-delay="200"
-                style="background:#FFFFFF;border:1px solid var(--border-default);border-radius:12px;padding:24px 26px;display:flex;gap:18px;align-items:flex-start">
-                <span
-                  style="flex:0 0 auto;font-family:var(--font-display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--tgi-mint)">3</span>
-                <div>
-                  <h3
-                    style="margin:0;font-family:var(--font-ui);font-weight:700;font-size:1rem;line-height:1.4;color:var(--text-strong)">
-                    A parallel law widens the surface area</h3>
-                  <p
-                    style="margin:8px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
-                    The <a href="http://bdlaws.minlaw.gov.bd/act-details-1709.html">National Data Management Act,
-                      2026</a> <a href="http://bdlaws.minlaw.gov.bd/act-1709/section-57921.html">establishes</a> an
-                    expansive interoperability and centralised data-governance framework through mandatory database
-                    integration, a national data exchange infrastructure, and <a
-                      href="http://bdlaws.minlaw.gov.bd/act-1709/section-57922.html">executive
-                      authority</a> over certain categories of information, while also empowering the regulator to
-                    require <a href="http://bdlaws.minlaw.gov.bd/act-1709/section-57923.html">compulsory storage</a> of
-                    such databases within national data centers. Without robust accountability mechanisms, these
-                    provisions increase the surface area of exposure in the event of a data breach.</p>
-                </div>
-              </div>
-              <div data-reveal="" data-delay="300"
-                style="background:var(--tgi-deep-teal);border-radius:12px;padding:24px 26px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 8px 24px rgba(16,32,31,0.18)">
-                <span
-                  style="flex:0 0 auto;font-family:var(--font-display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--tgi-mint)">4</span>
-                <div>
-                  <h3
                     style="margin:0;font-family:var(--font-ui);font-weight:700;font-size:1rem;line-height:1.4;color:#FFFFFF">
-                    Broad exemptions, and the state as breacher</h3>
+                    Broad exemptions provided to the state</h3>
                   <p
                     style="margin:8px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:var(--text-on-dark-muted);text-wrap:pretty">
                     The statute contains broad <a href="http://bdlaws.minlaw.gov.bd/act-1692/section-57290.html"
@@ -2413,6 +2361,83 @@
                     exemptions.</p>
                 </div>
               </div>
+              <div data-reveal="" data-delay="100"
+                style="background:#FFFFFF;border:1px solid var(--border-default);border-radius:12px;padding:24px 26px;display:flex;gap:18px;align-items:flex-start">
+                <span
+                  style="flex:0 0 auto;font-family:var(--font-display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--tgi-mint)">2</span>
+                <div>
+                  <h3
+                    style="margin:0;font-family:var(--font-ui);font-weight:700;font-size:1rem;line-height:1.4;color:var(--text-strong)">
+                    The remedies are not yet switched on</h3>
+                  <p
+                    style="margin:8px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
+                    Implementation is subject to <a
+                      href="http://bdlaws.minlaw.gov.bd/act-1692/section-57267.html">delayed commencement</a> leaving
+                    key elements of the enforcement and institutional framework in abeyance even
+                    after enactment. As a result, failures to comply with the breach notification obligation during the
+                    transitional period may not attract regulatory scrutiny or statutory penalties, nor can incidents
+                    occurring during that period be sanctioned retrospectively once the law becomes fully operational.
+                  </p>
+                </div>
+              </div>
+              <div data-reveal="" data-delay="200"
+                style="background:#FFFFFF;border:1px solid var(--border-default);border-radius:12px;padding:24px 26px;display:flex;gap:18px;align-items:flex-start">
+                <span
+                  style="flex:0 0 auto;font-family:var(--font-display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--tgi-mint)">3</span>
+                <div>
+                  <h3
+                    style="margin:0;font-family:var(--font-ui);font-weight:700;font-size:1rem;line-height:1.4;color:var(--text-strong)">
+                    Regulator-centred, not victim-centred</h3>
+                  <p
+                    style="margin:8px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
+                    The statute does not establish an independent civil cause of action for data breach through which
+                    affected individuals may seek relief before the ordinary courts without first engaging the
+                    regulatory authority, nor does it clarify how the compensation mechanism, <a
+                      href="http://bdlaws.minlaw.gov.bd/act-1692/section-57301.html">prescribed without defined
+                      parameters</a>, could be operationalised in practice. Additionally, the scale of available
+                    administrative penalties may not fully correspond to the scale of harm: maximum fines ranging
+                    between BDT 2.5 million and 5 million may be insufficient for large-scale data controllers
+                    processing population-level personal and sensitive data. </p>
+                </div>
+              </div>
+              <div data-reveal="" data-delay="300"
+                style="background:#FFFFFF;border:1px solid var(--border-default);border-radius:12px;padding:24px 26px;display:flex;gap:18px;align-items:flex-start">
+                <span
+                  style="flex:0 0 auto;font-family:var(--font-display);font-weight:800;font-size:1.6rem;line-height:1;color:var(--tgi-mint)">4</span>
+                <div>
+                  <h3
+                    style="margin:0;font-family:var(--font-ui);font-weight:700;font-size:1rem;line-height:1.4;color:var(--text-strong)">
+                    A parallel law widens the surface area</h3>
+                  <p
+                    style="margin:8px 0 0;font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
+                    The <a href="http://bdlaws.minlaw.gov.bd/act-details-1709.html">National Data Management Act,
+                      2026</a> <a href="http://bdlaws.minlaw.gov.bd/act-1709/section-57921.html">establishes</a> an
+                    expansive interoperability and centralised data-governance framework through mandatory database
+                    integration, a national data exchange infrastructure, and <a
+                      href="http://bdlaws.minlaw.gov.bd/act-1709/section-57922.html">executive
+                      authority</a> over certain categories of information, while also empowering the regulator to
+                    require <a href="http://bdlaws.minlaw.gov.bd/act-1709/section-57923.html">compulsory storage</a> of
+                    such databases within national data centers. Without robust accountability mechanisms, these
+                    provisions increase the surface area of exposure in the event of a data breach.</p>
+                </div>
+              </div>
+            </div>
+
+            <div data-reveal=""
+              style="margin-top:28px;background:var(--surface-subtle);border:1px solid var(--border-subtle);border-radius:12px;padding:24px 26px">
+              <p
+                style="margin:0;font-family:var(--font-body);font-size:1rem;line-height:1.7;color:var(--text-body);text-wrap:pretty">
+                <strong style="color:var(--text-strong)">Viewed collectively, the laws assessed leave an
+                  accountability vacuum.</strong> Statutory obligations exist, and remedial provisions are drafted,
+                but who bears responsibility for a breach, through which forum liability is to be established, and
+                under what timeline enforcement is to occur remain legally unsettled. Until the transitional
+                provisions are activated, the interlocking relationship between administrative, civil, and criminal
+                remedies is clarified, the interpretation of the exemptions is settled, and the independence of the
+                enforcing authority from public-sector fiduciaries is institutionally secured, Bangladesh's data
+                protection regime is likely to remain — as the pattern across the 68 documented incidents, the
+                overwhelming majority of them never publicly investigated, remediated, or even acknowledged, suggests
+                — a framework of formal rights without a corresponding structure of practical enforcement.
+              </p>
             </div>
           </div>
         </div>
@@ -2799,7 +2824,7 @@
                 </div>
                 <div
                   style="margin-top:4px;font-family:var(--font-ui);font-size:0.6875rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--tgi-pale-mint)">
-                  Researcher, Information Integrity</div>
+                  Researcher</div>
               </div>
             </div>
             <div
