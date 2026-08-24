@@ -2662,6 +2662,63 @@
                 "Exposed" figures originating from criminal or leak sources are claims, not confirmed counts. Where a
                 field cannot be established from the available evidence it is marked plainly ("Not disclosed", "None
                 published", "No public acknowledgment found").</p>
+
+              <div
+                style="margin-top:24px;padding-top:20px;border-top:1px solid var(--tgi-gray-200);display:flex;flex-direction:column;gap:14px">
+                <div style="display:flex;align-items:center;gap:8px">
+                  <span
+                    style="display:inline-block;width:4px;height:16px;background:var(--tgi-ocean);border-radius:2px;flex-shrink:0"></span>
+                  <h4
+                    style="margin:0;font-family:var(--font-display);font-weight:700;font-size:0.9375rem;line-height:1.35;color:var(--text-strong);letter-spacing:-0.01em">
+                    Methodological Note on Unverified Threat-Actor Claims</h4>
+                </div>
+
+                <p
+                  style="margin:0;font-family:var(--font-body);font-size:0.875rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
+                  In the absence of mandatory data breach disclosure regulations in Bangladesh, cybersecurity incidents
+                  are rarely disclosed proactively by targeted institutions. Historically, the vast majority of incidents
+                  that were eventually corroborated by national authorities or forensic investigations first surfaced as
+                  unconfirmed listings on dark-web forums, ransomware portals, or specialized Telegram channels. Excluding
+                  dark-web monitoring from threat intelligence research would omit the primary early-warning indicator
+                  of cyber activity targeting the country's public and private infrastructure.</p>
+
+                <p
+                  style="margin:0;font-family:var(--font-body);font-size:0.875rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
+                  However, threat intelligence tracking inherently captures criminal extortion behavior. Threat actors
+                  frequently circulate synthetic samples, recycled historical dumps, or malformed data schemas to bluff
+                  organizations into ransom negotiations.</p>
+
+                <p
+                  style="margin:0;font-family:var(--font-body);font-size:0.875rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
+                  To maintain evidentiary rigor, our methodology strictly isolates Unverified Claims from Verified
+                  Breaches:</p>
+
+                <div style="display:flex;flex-direction:column;gap:10px;margin:2px 0">
+                  <div
+                    style="display:flex;align-items:flex-start;gap:10px;background:var(--tgi-gray-50);border:1px solid var(--border-subtle);border-left:3px solid var(--tgi-grass);border-radius:8px;padding:12px 14px">
+                    <span
+                      style="font-family:var(--font-ui);font-size:0.8125rem;line-height:1.55;color:var(--text-body)"><strong
+                        style="color:var(--text-strong)">Verified Breaches (32)</strong> represent incidents
+                      corroborated by primary database analysis, explicit institutional admissions, or authoritative
+                      technical alerts from bodies like CIRT/BCSI.</span>
+                  </div>
+                  <div
+                    style="display:flex;align-items:flex-start;gap:10px;background:var(--tgi-gray-50);border:1px solid var(--border-subtle);border-left:3px solid var(--tgi-gray-300);border-radius:8px;padding:12px 14px">
+                    <span
+                      style="font-family:var(--font-ui);font-size:0.8125rem;line-height:1.55;color:var(--text-body)"><strong
+                        style="color:var(--text-strong)">Unverified Claims (31)</strong> document threat-actor listings,
+                      extortion chatter, and claims directed at specific entities. Inclusion in this tier signifies an
+                      active dark-web targeting event or extortion attempt; it does not establish verified unauthorized
+                      intrusion into the entity's core infrastructure or confirmed exfiltration of live citizen data.</span>
+                  </div>
+                </div>
+
+                <p
+                  style="margin:0;font-family:var(--font-body);font-size:0.875rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
+                  This dataset functions as an evolving public interest index. Where targeted entities conduct internal
+                  audits, provide forensic clarifications, or formally refute extortion claims, corresponding entries
+                  are updated to reflect the resolved status of the incident.</p>
+              </div>
             </div>
           </div>
 
@@ -3097,7 +3154,7 @@ class Component extends DCLogic {
       { d: 'Oct 2023', y: '2023', org: 'Smart NID voter data, via authorised third-party access - EC linked', sec: 'Mixed', exp: 'NID numbers, photographs, parents\u2019 names, phone, address', dis: 'Surfaced through a public [Telegram channel](https://www.thedailystar.net/news/bangladesh/crime-justice/news/smart-nid-data-leak-voters-info-now-telegram-channel-3435186)', v: 'verified' },
       { d: 'Nov 2023', y: '2023', org: 'National Telecommunication Monitoring Centre', sec: 'Government', exp: 'Names, NID numbers, phone records, passport & bank details, fingerprint images', dis: 'External security researcher ([via WIRED](https://www.wired.com/story/ntmc-bangladesh-database-leak/)); [NTMC denied](https://www.newagebd.net/print/article/217881)', v: 'verified' },
       { d: 'Jun 2024', y: '2024', org: 'myLocker — government-backed document-storage platform under the Digital Bangladesh programme', sec: 'Private', exp: 'Names, email, phone, NID, dates of birth — about 2.5M users', dis: 'Listed for sale on a [dark-web forum](https://bcsi.gov.bd/mylocker-user-information-available-for-sale/)', v: 'verified' },
-      { d: 'Nov 2024', y: '2024', org: 'bKash — mobile financial service', sec: 'Private', exp: '10M+ user records claimed, as well as service & telecommunication metadata', dis: 'Claim posted on a [dark-web forum](https://x.com/DailyDarkWeb/status/1856046257464324418/photo/1)', v: 'unverified' },
+      { d: "Feb 2024", y: 2024, org: "Nagad", sec: "Private", cat: "Mobile financial service", exp: "Extent of breach could not be corroborated", vec: "Not disclosed", dis: "[Telegram Bot](https://www.thedailystar.net/news/bangladesh/news/some-user-info-nagad-other-entities-public-domain-3564666)", ack: "Nagad declined any intrusion", pm: "None published", v: "reported", ver: "Reported - by [The Daily Star](https://www.thedailystar.net/news/bangladesh/news/some-user-info-nagad-other-entities-public-domain-3564666) but Nagad denied any intrusion" },
       { d: 'Dec 2024', y: '2024', org: 'Bangladesh Police', sec: 'Government', exp: 'Records of 100,000+ officers, government system login credentials, and at least 50 types of case-related information in the Crime Data Management System', dis: 'Newspaper investigation ([Prothom Alo](https://en.prothomalo.com/bangladesh/v4bcjdzepl))', v: 'verified' },
       { d: 'Jul 2025', y: '2025', org: 'Bangladesh Road Transport Authority (BRTA)', sec: 'Government', exp: 'NID, passport, parents\u2019 names, addresses — about 1M+ claimed', dis: 'Listed for sale on a [dark-web forum](https://dailydarkweb.net/bangladesh-road-transport-authority-data-allegedly-breached-over-1-million-records-for-sale/)', v: 'unverified' },
       { d: 'Dec 2025', y: '2025', org: 'Shwapno — supermarket chain', sec: 'Private', exp: 'Names, phone numbers, purchase history — about 4M customers', dis: 'Data surfaced on social media, reported by [major news outlets](https://www.thedailystar.net/business/news/shwapnos-database-hacked-40-lakh-customers-details-risk-4137566)', v: 'verified' },
