@@ -2630,14 +2630,14 @@
               style="background:#FFFFFF;border:1px solid var(--border-subtle);border-radius:12px;padding:28px">
               <p
                 style="margin:0;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tgi-teal)">
-                Verification key — the 68 incidents by tier</p>
+                Verification key — the incidents by tier</p>
               <div
                 style="display:flex;height:26px;border-radius:999px;overflow:hidden;margin-top:18px;background:var(--tgi-gray-100)">
-                <div data-grow="x" title="Verified: 32" style="width:47%;background:var(--tgi-grass)"></div>
-                <div data-grow="x" data-delay="120" title="Reported, unconfirmed: 5"
-                  style="width:7%;background:var(--state-warning)"></div>
+                <div data-grow="x" title="Verified: 32" style="width:46%;background:var(--tgi-grass)"></div>
+                <div data-grow="x" data-delay="120" title="Reported, unconfirmed: 6"
+                  style="width:9%;background:var(--state-warning)"></div>
                 <div data-grow="x" data-delay="240" title="Unverified claims: 31"
-                  style="width:46%;background:var(--tgi-gray-300)"></div>
+                  style="width:45%;background:var(--tgi-gray-300)"></div>
               </div>
               <div style="display:flex;flex-direction:column;gap:12px;margin-top:18px">
                 <div style="display:flex;align-items:flex-start;gap:10px"><span
@@ -2649,7 +2649,7 @@
                 <div style="display:flex;align-items:flex-start;gap:10px"><span
                     style="width:12px;height:12px;border-radius:3px;background:var(--state-warning);flex:0 0 auto;margin-top:4px"></span><span
                     style="font-family:var(--font-ui);font-size:0.875rem;line-height:1.55;color:var(--text-body)"><strong
-                      style="color:var(--text-strong)">5 reported, unconfirmed</strong> — a credible outlet noted the
+                      style="color:var(--text-strong)">6 reported, unconfirmed</strong> — a credible outlet noted the
                     claim, but it was not officially confirmed and we could not independently verify</span></div>
                 <div style="display:flex;align-items:flex-start;gap:10px"><span
                     style="width:12px;height:12px;border-radius:3px;background:var(--tgi-gray-300);flex:0 0 auto;margin-top:4px"></span><span
@@ -2753,7 +2753,7 @@
               </div>
               <p
                 style="margin:16px 0 10px;font-family:var(--font-ui);font-size:0.8125rem;font-weight:600;color:var(--text-muted)">
-                Showing {{ rowCount }} of 68 incidents</p>
+                Showing {{ rowCount }} of {{ totalCount }} incidents</p>
               <div style="border:1px solid var(--border-subtle);border-radius:12px;overflow:hidden;background:#FFFFFF">
                 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
                   <table style="width:100%;border-collapse:collapse;min-width:1160px">
@@ -3265,9 +3265,10 @@ class Component extends DCLogic {
           dis: this.md(r.dis), ack: this.md(r.ack), pm: this.md(r.pm), verText: this.md(r.ver),
           secBg: sm.bg, secFg: sm.fg, secLabel: sm.label });
       });
+    const getCount = (f) => f === 'All' ? all.length : all.filter(r => r.v === vfMap[f]).length;
     const vfChips = ['All', 'Verified', 'Reported', 'Unverified'].map((f) => ({
       f,
-      label: f === 'All' ? 'All (68)' : (f === 'Verified' ? 'Verified (32)' : (f === 'Reported' ? 'Reported, unconfirmed (5)' : 'Unverified claims (31)')),
+      label: f === 'All' ? ('All (' + all.length + ')') : (f === 'Verified' ? ('Verified (' + getCount('Verified') + ')') : (f === 'Reported' ? ('Reported, unconfirmed (' + getCount('Reported') + ')') : ('Unverified claims (' + getCount('Unverified') + ')'))),
       onClick: () => this.setState({ vf: f }),
       style: Object.assign({}, chipBase, { fontSize: '0.8125rem', padding: '8px 16px' }, f === s.vf
         ? { background: 'var(--tgi-deep-teal)', color: '#FFFFFF', border: '1px solid var(--tgi-deep-teal)' }
@@ -3311,8 +3312,8 @@ class Component extends DCLogic {
           }
         });
       },
-      tableBtnLabel: s.tableOpen ? 'Hide the full incident table' : 'View the full 68-incident table',
-      rows, rowCount: rows.length,
+      tableBtnLabel: s.tableOpen ? 'Hide the full incident table' : ('View the full ' + all.length + '-incident table'),
+      rows, rowCount: rows.length, totalCount: all.length,
       vfChips,
       q: s.q,
       onSearch: (e) => this.setState({ q: e.target.value }),
