@@ -2643,8 +2643,9 @@
                 <div style="display:flex;align-items:flex-start;gap:10px"><span
                     style="width:12px;height:12px;border-radius:3px;background:var(--tgi-grass);flex:0 0 auto;margin-top:4px"></span><span
                     style="font-family:var(--font-ui);font-size:0.875rem;line-height:1.55;color:var(--text-body)"><strong
-                      style="color:var(--text-strong)">32 verified</strong> — confirmed by a national authority (BCSI or
-                    CIRT), the breached organisation's own acknowledgment, or substantive mainstream reporting</span>
+                      style="color:var(--text-strong)">32 verified</strong> — established through independent
+                    verification, advisories from a national authority (BCSI or CIRT), the breached organisation's own
+                    acknowledgment, or substantive mainstream reporting.</span>
                 </div>
                 <div style="display:flex;align-items:flex-start;gap:10px"><span
                     style="width:12px;height:12px;border-radius:3px;background:var(--state-warning);flex:0 0 auto;margin-top:4px"></span><span
@@ -2676,51 +2677,63 @@
                 <p
                   style="margin:0;font-family:var(--font-body);font-size:0.875rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
                   In the absence of mandatory data breach disclosure regulations in Bangladesh, cybersecurity incidents
-                  are rarely disclosed proactively by targeted institutions. Historically, the vast majority of
-                  incidents
-                  that were eventually corroborated by national authorities or forensic investigations first surfaced as
-                  unconfirmed listings on dark-web forums, ransomware portals, or specialized Telegram channels.
-                  Excluding
-                  dark-web monitoring from threat intelligence research would omit the primary early-warning indicator
-                  of cyber activity targeting the country's public and private infrastructure.</p>
+                  are rarely disclosed proactively by targeted institutions. Historically, almost every major breach
+                  that was eventually corroborated by national authorities or technical investigations first surfaced as
+                  an unconfirmed listing on dark-web forums, ransomware portals, or specialized Telegram channels.
+                  Excluding dark-web monitoring from threat intelligence research would omit the primary early-warning
+                  indicator of cyber activity targeting the country's public and private infrastructure. However,
+                  independent technical verification is frequently complicated by the ephemeral nature of leak sites.
+                  Dark-web onion mirrors regularly change domains or go offline within days, making immediate forensic
+                  data capture difficult once an extortion window closes.</p>
 
                 <p
                   style="margin:0;font-family:var(--font-body);font-size:0.875rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
-                  However, threat intelligence tracking inherently captures criminal extortion behavior. Threat actors
-                  frequently circulate synthetic samples, recycled historical dumps, or malformed data schemas to bluff
-                  organizations into ransom negotiations.</p>
+                  Threat-actor tracking inherently captures criminal extortion behavior. In ransomware and forum leaks,
+                  the threat actor is almost always the sole initial source, and actors routinely circulate synthetic
+                  samples, recycled historical databases, or malformed data schemas to bluff organizations into ransom
+                  negotiations. This makes it essential for organizations to maintain resilient cybersecurity
+                  infrastructure, monitor external threat-actor chatter, and proactively investigate and address claims
+                  as soon as they surface.</p>
 
                 <p
                   style="margin:0;font-family:var(--font-body);font-size:0.875rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
-                  To maintain evidentiary rigor, our methodology strictly isolates Unverified Claims from Verified
-                  Breaches:</p>
+                  To navigate this opaque environment without presenting extortion claims as established facts, our
+                  methodology applies distinct evidentiary criteria across tiers:</p>
 
                 <div style="display:flex;flex-direction:column;gap:10px;margin:2px 0">
                   <div
                     style="display:flex;align-items:flex-start;gap:10px;background:var(--tgi-gray-50);border:1px solid var(--border-subtle);border-left:3px solid var(--tgi-grass);border-radius:8px;padding:12px 14px">
                     <span
                       style="font-family:var(--font-ui);font-size:0.8125rem;line-height:1.55;color:var(--text-body)"><strong
-                        style="color:var(--text-strong)">Verified Breaches (32)</strong> represent incidents
-                      corroborated by primary database analysis, explicit institutional admissions, or authoritative
-                      technical alerts from bodies like CIRT/BCSI.</span>
+                        style="color:var(--text-strong)">Verified Breaches (32):</strong> Incidents established through
+                      independent technical corroboration, advisories from national authorities (CIRT/BCSI), or
+                      substantive investigative reporting. We also treat explicit institutional admissions (such as
+                      those from Shwapno or Biman) as definitive proof, as organizations do not falsely acknowledge
+                      breaches against their own reputational interest. Conversely, institutional denials are not
+                      accepted at face value alone, as in the NTMC exposure, which was forensically verified by
+                      independent researchers and documented by WIRED despite official denials.</span>
                   </div>
                   <div
                     style="display:flex;align-items:flex-start;gap:10px;background:var(--tgi-gray-50);border:1px solid var(--border-subtle);border-left:3px solid var(--tgi-gray-300);border-radius:8px;padding:12px 14px">
                     <span
                       style="font-family:var(--font-ui);font-size:0.8125rem;line-height:1.55;color:var(--text-body)"><strong
-                        style="color:var(--text-strong)">Unverified Claims (31)</strong> document threat-actor listings,
-                      extortion chatter, and claims directed at specific entities. Inclusion in this tier signifies an
-                      active dark-web targeting event or extortion attempt; it does not establish verified unauthorized
-                      intrusion into the entity's core infrastructure or confirmed exfiltration of live citizen
-                      data.</span>
+                        style="color:var(--text-strong)">Unverified Claims (31):</strong> Single-source dark-web
+                      listings, extortion chatter, and threat-actor claims lacking corroborating forensic dumps,
+                      regulatory alerts, or independent validation. Inclusion in this tier signifies an active extortion
+                      or targeting attempt; it does not establish verified unauthorized intrusion into core
+                      infrastructure or confirmed exfiltration of live citizen data.</span>
                   </div>
                 </div>
 
                 <p
                   style="margin:0;font-family:var(--font-body);font-size:0.875rem;line-height:1.65;color:var(--text-body);text-wrap:pretty">
-                  This dataset functions as an evolving public interest index. Where targeted entities conduct internal
-                  audits, provide forensic clarifications, or formally refute extortion claims, corresponding entries
-                  are updated to reflect the resolved status of the incident.</p>
+                  We maintained strict editorial restraint and excluded ambiguous borderline events. For instance, when
+                  Biman experienced a suspected data and communication leak in 2025, the lack of mainstream reporting
+                  and lingering ambiguity over whether it was a genuine external interception or a localized insider
+                  issue led to its exclusion from our verified dataset. This dossier functions as an evolving public
+                  interest index. Where targeted entities conduct internal audits, provide forensic clarifications, or
+                  formally refute claims, corresponding entries are updated to reflect the updated status of the
+                  incident.</p>
               </div>
             </div>
           </div>
